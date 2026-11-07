@@ -1,0 +1,1838 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Ultraa Albums — Photo Album Manufacturer &amp; Album Designer in Mumbai</title><meta name="description" content="Ultra Albums is a wedding photo album manufacturer in India. Custom designing, binding and printing for photo albums and photobooks."><link rel="icon" href="assets/images/logo.png"><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+:root{--ivory:#f8f2e9;--paper:#fffdf9;--ink:#17130f;--mut:#6f665b;--gold:#b98a46;--gold2:#e3c07f;--wine:#5a1f2b;--line:rgba(23,19,15,.12);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Plus Jakarta Sans',system-ui,sans-serif;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{font:400 16px/1.65 var(--sans);color:var(--ink);background:var(--ivory);overflow-x:hidden;-webkit-font-smoothing:antialiased;padding-top:env(safe-area-inset-top,0)}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit;color:inherit;border:0;background:none}button{cursor:pointer}
+.wrap{width:min(1240px,100% - 2.4rem);margin:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.01em}
+h1{font-size:clamp(2.7rem,7.2vw,5.6rem)}h2{font-size:clamp(2.1rem,4.6vw,3.6rem)}h3{font-size:1.6rem}
+em{font-style:italic;color:var(--gold)}
+.kick{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:.9rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.6rem;border-radius:99px;font-weight:600;font-size:.9rem;transition:transform .3s var(--ease),box-shadow .3s,background .3s}
+.btn.p{background:var(--ink);color:var(--ivory);box-shadow:0 10px 30px -10px rgba(23,19,15,.6)}.btn.p:hover{transform:translateY(-3px);background:var(--wine)}
+.btn.s{border:1px solid var(--ink)}.btn.s:hover{background:var(--ink);color:var(--ivory)}
+.btn.g{background:linear-gradient(120deg,#c99a55,#ecd08f,#c99a55);color:#2a1d0c}
+nav{position:fixed;inset:0 0 auto;z-index:50;padding:env(safe-area-inset-top,0px) 0 .8rem;transition:.4s;backdrop-filter:blur(14px);background:rgba(248,242,233,.7)}
+nav.sc{box-shadow:0 1px 0 var(--line)}nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-family:var(--serif);font-size:1.7rem;font-weight:600;letter-spacing:.04em}.logo b{color:var(--gold)}
+nav ul{display:flex;gap:2rem;list-style:none;font-size:.88rem;font-weight:500}nav ul a:hover{color:var(--gold)}
+
+.hero{padding:10rem 0 3rem;position:relative;background:radial-gradient(60% 50% at 75% 40%,rgba(227,192,127,.35),transparent 70%),radial-gradient(40% 40% at 5% 90%,rgba(90,31,43,.1),transparent 70%)}
+.hgrid{display:grid;gap:2rem;grid-template-columns:1fr}@media(min-width:980px){.hgrid{grid-template-columns:.9fr 1.3fr;align-items:center}}
+.hero p.lead{color:var(--mut);max-width:46ch;margin:1.4rem 0 2rem;font-size:1.05rem}
+.badge{display:inline-flex;gap:.5rem;align-items:center;font-size:.78rem;padding:.45rem .9rem;border:1px solid var(--line);border-radius:99px;background:var(--paper);margin-bottom:1.4rem}
+.badge i{width:7px;height:7px;border-radius:50%;background:#3f9a62;box-shadow:0 0 0 4px rgba(63,154,98,.2);animation:pl 2s infinite}@keyframes pl{50%{box-shadow:0 0 0 8px rgba(63,154,98,0)}}
+.studio{background:linear-gradient(160deg,rgba(255,253,249,.9),rgba(248,242,233,.6));border:1px solid var(--line);border-radius:28px;padding:1rem 1rem 1.2rem;box-shadow:0 40px 80px -40px rgba(60,40,10,.35)}
+.stage{perspective:1700px;height:clamp(290px,50vw,440px);display:grid;place-items:center;cursor:grab;touch-action:pan-y;position:relative;user-select:none;overflow:hidden;border-radius:20px;background:radial-gradient(70% 60% at 50% 45%,#fff,#efe6d6)}
+.stage:active{cursor:grabbing}
+.rig{position:relative;width:0;height:0;transform-style:preserve-3d}
+.floor{position:absolute;left:0;top:0;height:34px;border-radius:50%;background:radial-gradient(closest-side,rgba(40,25,5,.45),transparent);filter:blur(6px);transition:width .9s var(--ease),transform .9s var(--ease)}
+.book{position:absolute;left:0;top:0;transform-style:preserve-3d;transition:transform 1s var(--ease)}
+.leaf{position:absolute;left:0;top:calc(var(--h)/-2);width:var(--w);height:var(--h);transform-origin:left center;transform-style:preserve-3d;transition:transform 1.1s var(--ease),width .9s var(--ease),height .9s var(--ease),top .9s var(--ease)}
+.fc{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;border-radius:2px 5px 5px 2px}
+.fc.bk{transform:rotateY(180deg);border-radius:5px 2px 2px 5px}
+.fc>i{position:absolute;top:0;height:100%;width:200%;background:var(--im) center/cover no-repeat}
+.fc.r>i{left:-100%}.fc.l>i{left:0}
+.fc::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.28),transparent 35%,transparent 70%,rgba(0,0,0,.08))}
+.fc.r::before,.fc.l::before{content:"";position:absolute;top:0;bottom:0;width:14%;z-index:2;pointer-events:none}
+.fc.r::before{left:0;background:linear-gradient(90deg,rgba(0,0,0,.3),transparent)}.fc.l::before{right:0;background:linear-gradient(270deg,rgba(0,0,0,.3),transparent)}
+.cov{background:var(--cv);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:12% 8%;text-align:center;color:var(--fg,#ecd08f);transition:background .6s}
+.cov::before{content:"";position:absolute;inset:3.5%;border:1px solid currentColor;opacity:.35;border-radius:2px}
+.cov .cr{font:600 calc(var(--k)*1.6)/1 var(--serif);letter-spacing:.1em;border:1px solid currentColor;padding:.25em .5em;border-radius:50%;opacity:.9}
+.cov .nm{font:italic 500 calc(var(--k)*2.5)/1.1 var(--serif);text-shadow:0 1px 0 rgba(255,255,255,.2),0 -1px 0 rgba(0,0,0,.4);padding:0 4%}
+.cov small{font-size:calc(var(--k)*.85);letter-spacing:.22em;text-transform:uppercase;opacity:.8}
+.lea{background:linear-gradient(135deg,var(--cv),#000 220%)}
+.edge,.spine{position:absolute;top:calc(var(--h)/-2);height:var(--h);transform-origin:left center;transform:rotateY(-90deg);transition:width .9s var(--ease),height .9s,top .9s,left .9s}
+.edge{left:var(--w);background:repeating-linear-gradient(90deg,#f3ecdf 0 var(--g),#b9ab92 var(--g) calc(var(--g) + 1px))}
+.spine{left:0;background:linear-gradient(90deg,var(--cv),#000 300%)}
+.ctl{display:grid;gap:1rem;padding:1.1rem .3rem 0}
+.row{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center}
+.lab{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);width:100%;display:flex;justify-content:space-between}.lab b{color:var(--ink);letter-spacing:.04em;text-transform:none;font-size:.78rem}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);background:rgba(23,19,15,.07);border-radius:99px;padding:4px;width:100%;position:relative}
+.seg button{padding:.7rem .2rem;border-radius:99px;font-weight:600;font-size:clamp(.7rem,2.4vw,.84rem);position:relative;z-index:1;transition:color .3s}
+.seg button.on{color:var(--ivory)}.seg .pill{position:absolute;top:4px;bottom:4px;left:4px;width:calc(25% - 2px);background:var(--ink);border-radius:99px;transition:transform .5s var(--ease)}
+.chip{padding:.5rem .9rem;border:1px solid var(--line);border-radius:99px;font-size:.82rem;font-weight:500;background:var(--paper);transition:.3s var(--ease)}
+.chip:hover{border-color:var(--gold)}.chip.on{background:var(--ink);color:var(--ivory);border-color:var(--ink);transform:translateY(-2px)}
+.sw{width:30px;height:30px;border-radius:50%;border:3px solid var(--paper);box-shadow:0 0 0 1px var(--line);transition:.3s var(--ease)}.sw.on{box-shadow:0 0 0 2px var(--gold);transform:scale(1.15)}
+.fi{width:100%;padding:.8rem 1rem;border:1px solid var(--line);border-radius:14px;background:var(--paper)}.fi:focus{outline:2px solid var(--gold2)}
+.nav2{display:flex;align-items:center;gap:.6rem;justify-content:space-between}.dots{display:flex;gap:6px}.dots i{width:8px;height:8px;border-radius:9px;background:var(--line);transition:.4s var(--ease)}.dots i.on{width:26px;background:var(--gold)}
+.spec{font-size:.8rem;color:var(--mut);text-align:center;min-height:1.4em}
+.mq{overflow:hidden;background:var(--ink);color:var(--gold2);padding:1.1rem 0;font:italic 500 1.5rem var(--serif);white-space:nowrap}
+.mq div{display:inline-block;animation:mq 38s linear infinite}.mq span{margin:0 1.6rem}.mq span::after{content:"✦";margin-left:3.2rem;font-size:.8rem;opacity:.6}@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:clamp(4rem,9vw,7.5rem) 0}.head{max-width:720px;margin-bottom:3rem}.head p{color:var(--mut);margin-top:1rem}
+.grid{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:box-shadow .4s,transform .25s;transform-style:preserve-3d;will-change:transform}
+.card:hover{box-shadow:0 40px 60px -30px rgba(60,40,10,.4)}.card .im{aspect-ratio:4/3;overflow:hidden;background:#efe8dc}.card img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}.card:hover img{transform:scale(1.07)}
+.card .tx{padding:1.4rem 1.5rem 1.6rem}.card small{color:var(--gold);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600}.card h3{margin:.3rem 0 .5rem}.card p{color:var(--mut);font-size:.9rem}
+.dark{background:var(--ink);color:var(--ivory)}.dark .head p,.dark .st p{color:#b8ad9d}
+.steps{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}.st{border-top:1px solid rgba(255,255,255,.2);padding-top:1.4rem}.st b{font:italic 500 3.4rem var(--serif);color:var(--gold2);display:block;line-height:1}.st h3{margin:.8rem 0 .4rem}
+.ba{position:relative;aspect-ratio:3/2;border-radius:22px;overflow:hidden;box-shadow:0 40px 60px -35px rgba(60,40,10,.5);--p:50%}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.ba .top{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.ba .ln{position:absolute;top:0;bottom:0;left:var(--p);width:2px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.4)}.ba .ln::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:1.1rem}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize}
+.two{display:grid;gap:3rem;align-items:center}@media(min-width:900px){.two{grid-template-columns:1fr 1fr}}
+.q{font:italic 500 1.4rem/1.4 var(--serif);margin-bottom:1.2rem}.who{font-size:.82rem;color:var(--mut)}.who b{display:block;color:var(--ink)}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:760px;margin-top:2.5rem}.team div{text-align:center;font-size:.82rem;color:var(--mut)}.team img{aspect-ratio:1;object-fit:cover;border-radius:50%;margin:0 auto .7rem;width:min(130px,100%);border:3px solid var(--gold2)}.team b{display:block;color:var(--ink)}
+.cta{background:linear-gradient(135deg,#2a1b12,var(--wine));color:var(--ivory);border-radius:32px;padding:clamp(2rem,6vw,4.5rem);text-align:center;position:relative;overflow:hidden}.cta::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(var(--gold2),transparent 65%);opacity:.25;top:-200px;right:-120px}.cta p{max-width:56ch;margin:1rem auto 2rem;color:#e6d9c7}
+form{display:grid;gap:.9rem;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:1.6rem}form .f2{display:grid;gap:.9rem}@media(min-width:560px){form .f2{grid-template-columns:1fr 1fr}}
+.err{outline:2px solid #c0392b!important}.ok{display:none;text-align:center;padding:2rem}.ok h3{color:#2f7d4f}
+footer{background:var(--ink);color:#b8ad9d;padding:3.5rem 0 2rem;font-size:.9rem}footer .fg{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}footer h4{color:var(--ivory);font:600 .75rem var(--sans);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.8rem}footer a:hover{color:var(--gold2)}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.rv.in{opacity:1;transform:none}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));z-index:99}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}}
+.lf .fc.l::before,.lf .fc.r::before{display:none}.lf .fc::after{background:linear-gradient(115deg,rgba(255,255,255,.16),transparent 40%)}
+.pcv{background-image:var(--im)!important;background-size:cover;background-position:center 30%;color:#fff;justify-content:flex-end}.pcv .nm{text-shadow:0 2px 14px #000;font-size:calc(var(--k)*2.2)}.pcv::before{opacity:.5}.pcv::after{background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.35) 48%,transparent 62%);background-size:250% 100%;animation:gl 4s infinite}@keyframes gl{from{background-position:120% 0}to{background-position:-120% 0}}
+.cas{position:absolute;left:0;top:0;transform-style:preserve-3d;display:none}
+.cw{position:absolute;left:0;top:0;background:repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 2px,transparent 2px 9px),linear-gradient(135deg,#94613a,#4a2a14);box-shadow:inset 0 0 0 2px rgba(227,192,127,.28)}
+.cw.f{width:var(--W);height:var(--H);transform:translate3d(calc(var(--W)/-2),calc(var(--H)/-2),calc(var(--D)/2))}
+.cw.b{width:var(--W);height:var(--H);transform:translate3d(calc(var(--W)/-2),calc(var(--H)/-2),calc(var(--D)/-2)) rotateY(180deg)}
+.cw.l,.cw.r{width:var(--D);height:var(--H);filter:brightness(.72)}.cw.l{transform:translate3d(calc(var(--D)/-2 - var(--W)/2),calc(var(--H)/-2),0) rotateY(90deg)}.cw.r{transform:translate3d(calc(var(--W)/2 - var(--D)/2),calc(var(--H)/-2),0) rotateY(90deg)}
+.cw.d,.cw.fl{width:var(--W);height:var(--D)}.cw.d{transform:translate3d(calc(var(--W)/-2),calc(var(--H)/2 - var(--D)/2),0) rotateX(90deg)}
+.cw.fl{background:radial-gradient(var(--cv),#000 220%);transform:translate3d(calc(var(--W)/-2),calc(var(--H)/2 - var(--D)/2 - 8px),0) rotateX(90deg)}
+.alb{position:absolute;left:0;top:0;transform-style:preserve-3d;transform:translate3d(0,var(--ay),var(--az)) rotateX(var(--aa));transition:transform 1.6s var(--ease)}
+.at{left:calc(var(--W)*-.43);top:calc(var(--D)*-.43);width:calc(var(--W)*.86);height:calc(var(--D)*.86);transform:rotateX(90deg);backface-visibility:visible}
+.lidh{position:absolute;left:0;top:0;transform-style:preserve-3d;transform:translate3d(0,calc(var(--H)/-2),calc(var(--D)/-2)) rotateX(var(--la));transition:transform 1.5s var(--ease)}
+.lid{position:absolute;left:calc(var(--W)/-2);top:0;width:var(--W);height:var(--D);transform-origin:top;transform:rotateX(90deg);transform-style:preserve-3d}
+.wd{background:repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 2px,transparent 2px 9px),linear-gradient(135deg,#a06b40,#58321a);border-radius:3px}
+.sat{transform:rotateY(180deg);background:radial-gradient(#f6eedf,#d6c4a2)}
+.lip{top:100%;width:100%;height:14px;transform-origin:top;transform:rotateX(-90deg)}
+.pl{position:absolute;inset:24% 20%;border:1px solid var(--gold2);display:grid;place-items:center;color:var(--gold2);font:italic 500 calc(var(--k)*1.8)/1.1 var(--serif);background:rgba(0,0,0,.2);text-align:center;box-shadow:0 0 0 4px rgba(0,0,0,.15)}
+.card{cursor:pointer}
+.ann{background:var(--wine);color:#f3dcd6;font:600 .68rem var(--sans);letter-spacing:.14em;overflow:hidden;white-space:nowrap;padding:.5rem 0;margin-bottom:.8rem}.ann div{display:inline-block;animation:mq 50s linear infinite}.ann span{margin:0 1.2rem}.ann span::before{content:"·";margin-right:2.4rem;opacity:.6}
+.nv2{padding-top:0}.menu{align-items:center}.menu>li>a,.dd>button{font-weight:500;font-size:.88rem;padding:.4rem 0;position:relative}.menu>li>a::after,.dd>button::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--ink);transition:.3s}.menu>li:hover>a::after,.dd:hover>button::after{width:100%}
+.dd{position:relative}.dm{position:absolute;top:100%;left:-1rem;min-width:310px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:.6rem;box-shadow:0 30px 60px -20px rgba(60,40,10,.35);opacity:0;visibility:hidden;transform:translateY(10px);transition:.35s var(--ease)}.dd:hover .dm,.dd.o .dm{opacity:1;visibility:visible;transform:none}.dm a{display:block;padding:.65rem .9rem;border-radius:12px;font-size:.86rem;font-weight:600}.dm a:hover{background:var(--ivory)}.dm small{display:block;font-weight:400;color:var(--mut);font-size:.76rem}
+.cur{padding:.5rem .7rem;border:1px solid var(--line);border-radius:99px;background:var(--paper);font-size:.8rem;font-weight:600}.bg{display:none;font-size:1.5rem;width:44px;height:44px}
+@media(max-width:900px){nav{backdrop-filter:none;background:rgba(248,242,233,.98)}.bg{display:block}.hd{display:none}.menu{position:fixed;top:0;right:0;bottom:0;width:min(86vw,350px);background:var(--paper);flex-direction:column;align-items:stretch;gap:.3rem;padding:5rem 1.4rem 2rem;transform:translateX(105%);transition:transform .5s var(--ease);box-shadow:-30px 0 60px rgba(0,0,0,.25);overflow:auto;z-index:60}.menu.o{transform:none}.dm{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;display:none;padding:.2rem 0 .6rem}.dd.o .dm{display:block}.menu>li>a,.dd>button{font-size:1.05rem;padding:.7rem 0;width:100%;text-align:left}.bg{z-index:70;position:relative}}
+.fq details{border-bottom:1px solid var(--line);padding:1.2rem 0}.fq summary{font:500 1.5rem var(--serif);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem}.fq summary::-webkit-details-marker{display:none}.fq summary::after{content:"+";color:var(--gold);font-size:1.8rem;line-height:1}.fq details[open] summary::after{content:"−"}.fq p{color:var(--mut);padding-top:.8rem;max-width:70ch}
+.from{margin-top:.8rem;font-size:.85rem;color:var(--mut)}.from b{color:var(--ink);font-size:1.05rem}
+.ck{display:grid;gap:.6rem;margin:1.4rem 0;list-style:none}.ck li::before{content:"✦ ";color:var(--gold)}
+.wa{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:55;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;font-size:1.6rem;box-shadow:0 12px 30px -8px rgba(0,0,0,.5);transition:.3s}.wa:hover{transform:scale(1.1) rotate(-6deg)}
+/* ===== pastel + minimal re-theme ===== */
+:root{--ivory:#FBF9F5;--paper:#fff;--ink:#1C2022;--mut:#6a6f73;--gold:#C2186B;--gold2:#F2B8D4;--wine:#F9ECE8;--acc:#D6006F;--line:rgba(28,32,34,.1);--bl:#F9ECE8;--lv:#F2EFF9;--sg:#EFF6F1;--bt:#FEF8E7}
+body{background:var(--ivory)}
+.hero{background:radial-gradient(55% 50% at 78% 38%,rgba(242,184,212,.45),transparent 70%),radial-gradient(45% 45% at 6% 88%,rgba(223,215,242,.7),transparent 70%),radial-gradient(35% 35% at 50% 0,rgba(247,231,190,.5),transparent 70%)}
+.ann{background:var(--bl);color:#965B50}
+.logo img{height:52px;width:auto}.logo{display:block}
+.btn.p:hover{background:var(--acc)}
+.mq{background:var(--lv);color:#66528A}
+.dark{background:var(--lv);color:var(--ink)}.st b{color:var(--acc);opacity:.55}
+.steps .st{background:#fff;border-radius:22px;padding:1.6rem}
+footer{background:var(--lv);color:#55595f}footer h4{color:var(--ink)}footer a{display:block;padding:.15rem 0}footer a:hover{color:var(--acc)}
+.card .im{background:var(--bl)}.card .from{display:none}.cur{display:none}
+.t1s{background:var(--bl)}.t2s{background:var(--sg)}.t3s{background:var(--bt)}
+section{padding:5.5rem 0}
+.sr{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
+.sy{border-radius:120px 120px 22px 22px;padding:0 0 1.4rem;text-align:center;overflow:hidden}.sy img{width:100%;aspect-ratio:1;object-fit:cover}.sy b{display:block;font:500 1.35rem var(--serif);margin:.9rem 1rem .3rem}.sy p{font-size:.84rem;color:var(--mut);padding:0 1.1rem}
+.t1{background:var(--bl)}.t2{background:var(--lv)}.t3{background:var(--sg)}.t4{background:var(--bt)}
+.mas{columns:4 220px;column-gap:1rem}.gt{break-inside:avoid;margin:0 0 1rem;border-radius:22px;overflow:hidden;position:relative;cursor:zoom-in}
+.gt img{width:100%;object-fit:cover;transition:transform .6s var(--ease)}.gt:hover img{transform:scale(1.05)}
+.g0 img{aspect-ratio:3/4}.g1 img{aspect-ratio:1}.g2 img{aspect-ratio:4/5}.g3 img{aspect-ratio:3/2}.g4 img{aspect-ratio:5/6}
+.gt figcaption{position:absolute;left:.7rem;bottom:.7rem;background:rgba(255,255,255,.85);backdrop-filter:blur(6px);font-size:.74rem;font-weight:600;padding:.3rem .7rem;border-radius:99px}
+#lb{position:fixed;inset:0;z-index:200;background:rgba(251,249,245,.94);display:none;place-items:center;cursor:zoom-out}#lb.on{display:grid}#lb img{max-width:92vw;max-height:88vh;border-radius:18px;box-shadow:0 40px 80px -30px rgba(0,0,0,.35)}
+.cta2{text-align:center}.cta2 p{color:var(--mut);margin:1rem 0 1.8rem}
+.grid .c,.g .c{border-radius:22px;padding:1.6rem}.grid .c h3{font-size:1.5rem}
+/* inner pages */
+.page{display:none;padding:9.5rem 0 5rem;min-height:70vh}.page.on{display:block}
+.prose{max-width:1100px}.prose h1{font-size:clamp(2.4rem,5vw,4rem);margin-bottom:1rem}.prose h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin:2.4rem 0 .8rem}.prose h3{margin:1.2rem 0 .5rem}
+.prose p,.prose li{color:#4a4f54;margin:.6rem 0;max-width:72ch}.prose ul{padding-left:1.2rem}
+.prose a:not(.btn){color:var(--acc);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.prose img{border-radius:22px;width:100%;max-height:460px;object-fit:cover;margin:.6rem 0}
+.prose .kick{color:var(--acc)}.prose .meta{color:var(--mut);font-size:.9rem;display:flex;gap:.6rem;flex-wrap:wrap}
+.pdp{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}.pdp>div:first-child{position:sticky;top:8rem}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin:1.2rem 0}
+.prose .pc,.c,.prose .sc,.fq,.pf{background:#fff;border:1px solid var(--line);border-radius:22px;padding:1.4rem;margin:.6rem 0}
+.pc img{border-radius:16px;max-height:240px}.pt{font:500 1.4rem var(--serif)}
+.cta{background:var(--bl);border-radius:26px;padding:2rem;margin:2.5rem 0}.spec{border-collapse:collapse;width:100%;margin:1rem 0}.spec td{padding:.7rem;border-bottom:1px solid var(--line)}
+.ff{display:grid;gap:.8rem;max-width:560px;margin-top:2rem}.fi.err{border-color:#c2186b}
+.cx{margin:2rem 0}
+@media(max-width:860px){.pdp{grid-template-columns:1fr}.pdp>div:first-child{position:static}.menu.o .dm{display:block}}
+</style><style id="x-up">
+:root{color-scheme:light}html{background:#FBF9F5}
+nav.stuck{box-shadow:0 1px 0 var(--line)}nav{transition:top .55s var(--ease),box-shadow .4s}nav.hide{top:-160px}
+.floor{display:none}
+.gs{position:absolute;left:50%;top:50%;height:30px;margin-top:-6px;border-radius:50%;background:radial-gradient(closest-side,rgba(40,25,5,.5),transparent);filter:blur(7px);pointer-events:none;transition:width .9s var(--ease),transform .9s var(--ease)}
+.fc:not(.pcv)::after{background:radial-gradient(70% 90% at var(--gx,30%) 12%,rgba(255,255,255,.36),transparent 62%),linear-gradient(115deg,transparent 62%,rgba(0,0,0,.09))}
+.lf .fc:not(.pcv)::after{background:radial-gradient(70% 90% at var(--gx,30%) 12%,rgba(255,255,255,.22),transparent 62%)}
+.rv{opacity:0;transform:translate3d(0,var(--ty,56px),0) scale(.97);transition:opacity .9s var(--ease) var(--dl,0s),transform 1.1s var(--ease) var(--dl,0s)}
+.rv.in{opacity:1;transform:none}
+.steps .st.rv:not(.in){transform:perspective(900px) translate3d(0,var(--ty,56px),0) rotateX(-38deg)}
+.sy.rv:not(.in){transform:translate3d(0,var(--ty,56px),0) scale(.88)}
+.card.rv.done{transition:transform .25s ease-out,box-shadow .4s}
+.gt img,.sy img,.card .im img{scale:1.18;translate:0 var(--py,0px)}
+.gt.rv:not(.in) img{scale:1.45}.gt img{transition:transform .6s var(--ease),scale 1.5s var(--ease)}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .05em .14em;margin:0 -.05em -.14em}
+.w>span{display:inline-block;transform:translateY(112%) rotate(5deg);transform-origin:0 100%;transition:transform 1s var(--ease) calc(var(--i)*65ms)}
+.hero h1 .w>span{animation:wi 1.1s var(--ease) calc(.2s + var(--i)*.1s) forwards}@keyframes wi{to{transform:none}}
+section .in .w>span,section .in.w>span{transform:none}
+.hero{overflow:clip}.hero::before{content:"";position:absolute;width:520px;height:520px;right:-140px;top:40px;border-radius:50%;background:radial-gradient(rgba(242,184,212,.55),transparent 65%);filter:blur(24px);animation:fl 10s ease-in-out infinite alternate;pointer-events:none}@keyframes fl{to{transform:translate(-70px,60px) scale(1.18)}}
+.btn{transition:transform .3s var(--ease),box-shadow .3s,background .3s,translate .3s var(--ease)}
+.page.on{animation:pg .8s var(--ease)}@keyframes pg{from{opacity:0;transform:translateY(26px)}}
+#lb.on{animation:lbi .35s ease}#lb.on img{animation:zi .6s var(--ease)}@keyframes lbi{from{opacity:0}}@keyframes zi{from{opacity:0;transform:scale(.88) translateY(30px)}}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.rv,.rv:not(.in),.steps .st.rv:not(.in),.sy.rv:not(.in){opacity:1!important;transform:none!important}.w>span{transform:none!important;animation:none!important}.gt.rv:not(.in) img{scale:1.18}.hero::before{animation:none}}
+</style><style id="x-up2">
+:root{--serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,sans-serif}
+html{font-size:112.5%}body{font:400 1rem/1.7 var(--sans)}
+h1,h2,h3{font-weight:460;letter-spacing:-.022em;line-height:1.05}
+h1{font-size:clamp(2.9rem,7vw,5.6rem)}h2{font-size:clamp(2.3rem,4.8vw,3.9rem)}h3{font-size:1.65rem}em{font-weight:420}
+.hero p.lead{font-size:1.2rem;max-width:44ch}.menu>li>a,.dd>button{font-size:.95rem;font-weight:600}
+.btn{font-size:1rem;padding:1rem 1.7rem}.chip{font-size:.92rem;padding:.6rem 1.05rem}.lab{font-size:.74rem}.lab b{font-size:.9rem}
+.seg button{font-size:clamp(.8rem,2.4vw,.98rem);font-weight:700}.card p,.sy p,.st p{font-size:1rem}.card small{font-size:.76rem}.spec{font-size:.9rem}.mq{font-size:1.7rem}
+.stage{height:clamp(340px,54vw,540px);perspective:2000px}
+.fc>i{background-image:var(--im);background-size:cover;background-position:center 32%;background-repeat:no-repeat}
+.gt.rv{transition:clip-path 1.2s var(--ease) var(--dl,0s),opacity .6s}
+.gt.rv:not(.in){opacity:1;transform:none;clip-path:inset(var(--cp,100% 0 0 0) round 22px)}.gt.rv.in{clip-path:inset(0 0 0 0 round 22px)}.gt.rv:not(.in) img{scale:1.18}
+
+.hero{padding:8.5rem 0 3rem}.hero h1{font-size:clamp(2.5rem,4.4vw,4.2rem)}
+@media(min-width:980px){.hgrid{grid-template-columns:.9fr 1.25fr;align-items:start;gap:2.5rem}.hgrid>div:first-child{padding-top:3rem}}
+.stage{height:clamp(320px,34vw,420px)}
+#cards{grid-template-columns:1fr}@media(min-width:620px){#cards{grid-template-columns:repeat(2,1fr)}}@media(min-width:1000px){#cards{grid-template-columns:repeat(3,1fr)}}
+section.phs{padding:0 0 5.5rem}
+.ph{margin:0;border-radius:30px;overflow:hidden;aspect-ratio:16/8;background:var(--bl);box-shadow:0 50px 90px -50px rgba(60,40,10,.45)}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;scale:1.14;translate:0 var(--py,0px)}
+@media(max-width:700px){.ph{aspect-ratio:4/3;border-radius:22px}}
+
+.hx{display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:1fr 1fr;gap:.8rem;height:clamp(250px,32vw,340px);margin-top:2.2rem}
+.hx figure{margin:0;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 24px 40px -24px rgba(60,40,10,.35)}.hx .a{grid-row:span 2}.hx img{width:100%;height:100%;object-fit:cover}
+.hs{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.1rem}.hs span{font-size:.8rem;padding:.5rem .9rem;border:1px solid var(--line);border-radius:99px;background:var(--paper)}.hs b{font-weight:700}
+.mas{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;columns:auto}@media(max-width:900px){.mas{grid-template-columns:repeat(2,1fr)}}
+.gx{margin:0;border-radius:22px;overflow:hidden;position:relative;cursor:zoom-in;aspect-ratio:4/5;background:#fff}.gx.off{display:none}
+.gx img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}.gx:hover img{transform:scale(1.05)}
+.gx figcaption{position:absolute;left:.7rem;bottom:.7rem;background:rgba(255,255,255,.88);backdrop-filter:blur(6px);font-size:.74rem;font-weight:600;padding:.3rem .7rem;border-radius:99px}
+.hq{margin:1.6rem 0 0;padding:.2rem 0 .2rem 1.1rem;border-left:3px solid var(--gold);font:italic 500 1.2rem/1.45 var(--serif);max-width:46ch}
+.hf{list-style:none;padding:0;margin:1.3rem 0 0;display:grid;grid-template-columns:1fr 1fr;gap:.8rem}@media(max-width:600px){.hf{grid-template-columns:1fr}}
+.hf li{padding:1rem 1.1rem;border:1px solid var(--line);border-radius:18px;background:var(--paper)}.hf b{display:block;font:600 1.02rem var(--serif);margin-bottom:.25rem}.hf span{font-size:.84rem;color:var(--mut);line-height:1.5}
+.gx{aspect-ratio:1/1!important}.gx img{object-fit:contain}.gx img[data-u],.gx img[data-c]{object-fit:cover}
+.gxr .gx:not(.in){opacity:0;transform:translateY(46px) scale(.95)}.gxr .gx:not(.in) img{scale:1.2}
+.gxr .gx{transition:opacity .8s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}.gx img{transition:transform .6s var(--ease),scale 1.4s var(--ease)}
+@media(prefers-reduced-motion:reduce){.gxr .gx:not(.in){opacity:1;transform:none}.gxr .gx:not(.in) img{scale:1}}
+</style><style>/* ===== Final polish: one type system, consistent rhythm & alignment ===== */
+:root{--serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--r:24px;--sec:6.5rem}
+body{font-family:var(--sans)}
+button,input,select,textarea{font-family:var(--sans);font-size:1rem}
+h1,h2,h3,h4,h5,h6,.mq,.sy b,.st b,.pt,.hq,.hf b,blockquote{font-family:var(--serif)}
+h1,h2,h3,h4{font-weight:460;letter-spacing:-.02em;line-height:1.1}
+h4{font-size:1.15rem}
+/* section rhythm */
+section{padding:var(--sec) 0}section.phs{padding:0 0 var(--sec)}
+.wrap{width:min(1180px,100% - 3rem);margin-inline:auto}
+.head{display:block;text-align:center;max-width:780px;margin:0 auto 3.4rem}
+.head h2{margin:0 0 1rem}.head p{color:var(--mut);max-width:56ch;margin:0 auto;font-size:1.05rem}
+/* product / service cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.6rem;align-items:stretch}
+#cards{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.card{display:flex;flex-direction:column;height:100%;border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line)}
+.card .im{aspect-ratio:4/3;overflow:hidden;flex:none}.card .im img{width:100%;height:100%;object-fit:cover;display:block}
+.card .tx,.card>div:last-child{display:flex;flex-direction:column;flex:1;padding:1.6rem 1.7rem 1.8rem;text-align:left}
+.card small{margin-bottom:.55rem;display:block}.card h3{margin:0 0 .6rem;font-size:1.55rem}.card p{flex:1;color:var(--mut);margin:0 0 1rem}
+/* every story */
+.sr{display:grid;grid-template-columns:repeat(5,1fr);gap:1.3rem;align-items:stretch}
+@media(max-width:1100px){.sr{grid-template-columns:repeat(3,1fr)}}@media(max-width:700px){.sr{grid-template-columns:repeat(2,1fr)}}@media(max-width:460px){.sr{grid-template-columns:1fr}}
+.sy{display:flex;flex-direction:column;align-items:center;text-align:center;border-radius:999px 999px var(--r) var(--r);overflow:hidden;padding:0 0 1.7rem}
+.sy img{width:100%;aspect-ratio:4/5;object-fit:cover;scale:1!important;translate:none!important;margin:0}
+.sy b{display:block;font-size:1.3rem;line-height:1.2;margin:1.2rem 1rem .5rem}.sy p{font-size:.92rem;color:var(--mut);padding:0 1.2rem;margin:0}
+/* gallery */
+.mas{gap:1.1rem}.gx{border-radius:var(--r)}
+/* steps + why-us */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem}.steps .st{height:100%;text-align:left}
+.st b{display:block;font-size:2.2rem;margin-bottom:.6rem}.st h3{font-size:1.4rem;margin:0 0 .6rem}.st p{color:var(--mut);margin:0}
+.two{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:center}@media(max-width:860px){.two{grid-template-columns:1fr;gap:2rem}}
+.cta2{text-align:center;max-width:760px}.cta2 .btn{margin:.3rem .4rem}
+/* footer */
+footer{padding:4.5rem 0 2.5rem}.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr 1fr 1.4fr;gap:2.2rem;align-items:start}
+@media(max-width:1100px){.fg{grid-template-columns:repeat(3,1fr)}}@media(max-width:620px){.fg{grid-template-columns:1fr 1fr}}
+footer h4{font-family:var(--sans);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:0 0 1rem}
+footer a,footer p{font-size:.95rem;line-height:1.6}
+/* inner pages */
+.page{padding:9.5rem 0 var(--sec)}.prose{max-width:1120px;margin-inline:auto}
+.prose h1{margin:0 0 1.2rem}.prose h2{margin:3rem 0 1rem}.prose h3{margin:1.6rem 0 .6rem;font-size:1.5rem}
+.prose p,.prose li{font-size:1.04rem;line-height:1.75}
+.pdp{gap:4rem;align-items:start}.pdp>div:first-child{top:9rem}
+.spec{width:100%;border-collapse:collapse}.spec td,.spec th{padding:.9rem .6rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.spec td:first-child,.spec th{font-weight:700;width:32%}
+.g{gap:1.4rem}.pc,.c,.sc,.fq,.pf{border-radius:var(--r)}
+.cta{text-align:center}.cta .btn{margin:.3rem}
+.ff{max-width:620px}.fi,.ff input,.ff select,.ff textarea{width:100%;padding:1rem 1.15rem;border:1px solid var(--line);border-radius:14px;background:#fff;font:inherit;color:inherit}
+.fi:focus,.ff input:focus,.ff textarea:focus{outline:2px solid var(--acc);outline-offset:1px}
+.btn{font-family:var(--sans);font-weight:700;letter-spacing:.01em}
+footer .fg{grid-template-columns:1.5fr 1fr 1fr 1.1fr 1fr 1.5fr}
+@media(max-width:1100px){footer .fg{grid-template-columns:repeat(3,1fr)}}@media(max-width:620px){footer .fg{grid-template-columns:1fr 1fr}}
+/* ===== hero: heading + customise-album level, bigger album ===== */
+.hero{padding:8.5rem 0 4.5rem}
+@media(min-width:980px){.hgrid{grid-template-columns:.8fr 1.3fr;align-items:center;gap:3.5rem}.hgrid>div:first-child{padding-top:0}}
+.hero h1{font-size:clamp(2.6rem,4.6vw,4.4rem)}
+.stage{height:clamp(380px,42vw,540px)}
+.studio{padding:1.2rem 1.2rem 1.5rem}
+/* why section (quote + feature boxes) */
+.why{padding:var(--sec) 0 calc(var(--sec) - 1rem)}
+.why .head{margin-bottom:2.6rem}.wq{font:italic 460 1.35rem/1.5 var(--serif);color:var(--ink)!important;max-width:34ch!important}
+.why .hf{margin:0;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+@media(max-width:1000px){.why .hf{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.why .hf{grid-template-columns:1fr}}
+.why .hf li{padding:1.6rem 1.5rem;border-radius:var(--r);height:100%}.why .hf b{font-size:1.15rem;margin-bottom:.5rem}.why .hf span{font-size:.92rem}
+/* ampersand: plain upright "&" */
+.amp{font-family:var(--sans);font-style:normal;font-weight:500;letter-spacing:0}
+</style>
+<style id="user-layout-updates">
+@media (min-width:980px){
+  .hgrid{align-items:stretch!important}
+  .hgrid>.rv{display:flex;flex-direction:column;justify-content:center;min-height:100%}
+  .hgrid>.studio{height:100%;box-sizing:border-box;display:flex;flex-direction:column}
+  .hgrid>.studio>.stage{flex:1 1 auto;min-height:290px}
+}
+@media (max-width:979px){
+  .hgrid>.rv{display:block}
+  .hgrid>.studio{height:auto}
+}
+.sy[data-slot="wedding"] img,.sy[data-slot="family"] img,.sy[data-slot="travel"] img,.sy[data-slot="wall-art"] img{object-fit:cover}
+#gallery .gx img{display:block}
+</style>
+<style>#ba{width:100%;aspect-ratio:262/399;max-width:440px;margin-inline:auto}#ba img{object-fit:cover}</style></head><body><div id="bar"></div><nav id="nv"><div class="ann"><div><span>Worldwide delivery</span><span>Reliable quality</span><span>Unlimited design revisions</span><span>Call +91 93222 54315</span><span>Photo album manufacturer · Mumbai</span><span>Worldwide delivery</span><span>Reliable quality</span><span>Unlimited design revisions</span><span>Call +91 93222 54315</span><span>Photo album manufacturer · Mumbai</span><span>Worldwide delivery</span><span>Reliable quality</span><span>Unlimited design revisions</span><span>Call +91 93222 54315</span><span>Photo album manufacturer · Mumbai</span></div></div><div class="wrap nv2"><a class="logo" href="#home"><img src="assets/images/logo.png" alt="Ultraa Albums"></a><ul class="menu" id="menu"><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li class="dd"><button type="button">Our Products ▾</button><div class="dm"><a href="#products">All Products</a><a href="#flush-mount-album">Flush Mount Album</a><a href="#layflat">Layflat</a><a href="#photo-book">Photo Book</a><a href="#luxury-albums">Luxury Albums</a><a href="#box-and-bags">Box and Bags</a><a href="#slip-in-albums">Slip in Albums</a></div></li><li class="dd"><button type="button">Services ▾</button><div class="dm"><a href="#image-editing">Image Editing</a><a href="#photography">Wedding Photography</a><a href="#album-designing">Album Designing</a><a href="#album-designs">Album Designs</a></div></li><li class="dd"><button type="button">UK ▾</button><div class="dm"><a href="#flush-mount-album-for-uk">Flush Mount Album</a><a href="#luxury-albums-for-uk">Luxury Albums</a><a href="#box-and-bags-for-uk">Box and Bags</a><a href="#slip-in-albums-for-uk">Slip in Albums</a><a href="#image-editing-for-uk">Image Editing</a><a href="#photo-book-for-uk">Photo Book</a><a href="#photography-for-uk">Photography</a></div></li><li><a href="#blogs">Blogs</a></li><li><a href="#contact">Contact Us</a></li></ul><div class="row" style="flex-wrap:nowrap"><a class="btn p hd" href="https://www.paypal.com/in/signin" target="_blank" rel="noopener">Pay Online</a><button type="button" class="bg" id="bg" aria-label="Menu">☰</button></div></div></nav><div id="home"><header class="hero" id="top"><div class="wrap hgrid">
+<div class="rv"><span class="badge"><i></i>Photo album manufacturer · Mumbai · Worldwide delivery</span>
+<h1>Build your wedding photo book <em>with us.</em></h1>
+<p class="lead">Mumbai’s leading photo album designer and wedding photo album manufacturer — making photobook albums for photographers for 15 years.</p>
+<div class="row" style="gap:.8rem"><a class="btn p" href="#collections">Explore products →</a><a class="btn s" href="#contact">Talk to the studio</a></div></div>
+<div class="studio rv"><div class="stage" id="stage"><div class="rig" id="rig"><div class="floor" id="floor"></div><div class="book" id="book"></div><div class="cas" id="cas"></div></div></div>
+<div class="ctl">
+<div class="row"><span class="lab">3D product <b id="lf">Flush Mount</b></span><div class="seg" id="seg"><span class="pill" id="pill"></span><button class="on" data-f="flush">Flush Mount</button><button data-f="lay">Layflat</button><button data-f="casket">Casket</button><button data-f="photo">Photo Book</button></div></div>
+<div class="row" id="sizes"><span class="lab">Size <b id="ls"></b></span></div>
+<div class="row" id="cols"><span class="lab">Cover <b id="lc"></b></span></div>
+<input class="fi" id="nm" maxlength="26" value="Maya &amp; Arjun" aria-label="Names on cover" placeholder="Names for gold foil">
+<div class="nav2"><button class="btn s" id="pv" style="padding:.6rem 1.1rem">←</button><div class="dots" id="dots"></div><button class="btn p" id="nx" style="padding:.6rem 1.1rem">Turn page →</button></div>
+<p class="spec" id="spec"></p></div></div>
+</div></header>
+
+<div class="mq"><div><span>Worldwide Delivery</span><span>Cost Effective</span><span>Reliable Quality</span><span>Customer Centric</span><span>Worldwide Delivery</span><span>Cost Effective</span><span>Reliable Quality</span><span>Customer Centric</span><span>Worldwide Delivery</span><span>Cost Effective</span><span>Reliable Quality</span><span>Customer Centric</span></div></div>
+
+
+<section class="why" id="why"><div class="wrap"><div class="head rv"><h2>Made for <em>photographers</em></h2><p class="wq">Every photographer is a storyteller who tells the story through his photographs.</p></div><ul class="hf"><li><b>Personalized album design</b><span>Western and traditional themes, with a soft-copy preview and unlimited revisions.</span></li><li><b>Photo album printing</b><span>Flush mount, layflat, photo books and luxury albums for every occasion.</span></li><li><b>Secure global shipping</b><span>Your finished album delivered safely to your door, anywhere in the world.</span></li><li><b>15+ years in Mumbai</b><span>Wedding, baby, family and travel albums made for photographers.</span></li></ul></div></section>
+<section id="collections"><div class="wrap"><div class="head rv"><h2>Our <em>products</em></h2><p>Give wings to your imagination with the best photo album manufacturer in Mumbai.</p></div><div class="grid" id="cards"></div></div></section>
+<section class="t3s"><div class="wrap"><div class="head rv"><h2>A photo album for <em>every story</em></h2></div><div class="sr"><div class="sy t1"><img data-i="wedding_d1" data-slot="wedding" alt="Wedding Photo Albums"><b>Wedding Photo Albums</b><p>A meticulously crafted album that preserves the precious memories of a wedding day in an elegant and lavish manner.</p></div><div class="sy t2"><img data-i="baby_user" data-slot="baby" alt="Baby Photo Albums"><b>Baby Photo Albums</b><p>A cherished album for your little one, with plenty of creative ideas to celebrate those precious moments.</p></div><div class="sy t3"><img data-i="flush_mount_2" data-slot="family" alt="Family Photo Albums"><b>Family Photo Albums</b><p>The significant moments, events and memories shared by a family — milestones, celebrations and everyday life.</p></div><div class="sy t4"><img data-i="photobook_1" data-slot="travel" alt="Travel Photo Albums"><b>Travel Photo Albums</b><p>Cherish your adventures and tell your story through visuals, captions and mementos.</p></div><div class="sy t1"><img data-i="flush_mount_1" data-slot="wall-art" alt="Premium Wall Art"><b>Premium Wall Art</b><p>Wall decor that enhances the aesthetic appeal of your space and reflects your personality.</p></div></div></div></section>
+<section id="gallery"><div class="wrap"><div class="head rv"><h2>A look <em>inside</em> our albums</h2><p>Tap any photo to open it larger.</p></div><div class="mas" id="mas"><figure class="gx"><img data-c="1" data-k="g_wedding" alt="Wedding procession" loading="lazy"><figcaption>Wedding procession</figcaption></figure><figure class="gx"><img data-c="1" data-k="g_dance" alt="Celebration" loading="lazy"><figcaption>Celebration</figcaption></figure><figure class="gx"><img data-c="1" data-k="svc_photo" alt="Wedding ceremony" loading="lazy"><figcaption>Wedding ceremony</figcaption></figure><figure class="gx"><img data-c="1" data-k="g_family" alt="Family portrait" loading="lazy"><figcaption>Family portrait</figcaption></figure><figure class="gx"><img data-c="1" data-k="baby_user" alt="Baby album" loading="lazy"><figcaption>Baby album</figcaption></figure><figure class="gx"><img data-c="1" data-k="g_pano" alt="Panorama" loading="lazy"><figcaption>Panorama</figcaption></figure><figure class="gx"><img data-c="1" data-k="g_spreads" alt="Spreads" loading="lazy"><figcaption>Spreads</figcaption></figure><figure class="gx"><img data-c="1" data-k="flush_mount_1" alt="Flush mount" loading="lazy"><figcaption>Flush mount</figcaption></figure><figure class="gx"><img data-c="1" data-k="layflat_1" alt="Layflat spread" loading="lazy"><figcaption>Layflat spread</figcaption></figure><figure class="gx"><img data-c="1" data-k="luxury_casket" alt="Luxury albums" loading="lazy"><figcaption>Luxury albums</figcaption></figure><figure class="gx"><img data-c="1" data-k="photobook_1" alt="Photo book" loading="lazy"><figcaption>Photo book</figcaption></figure><figure class="gx"><img data-c="1" data-k="slip_in_1" alt="Slip-in album" loading="lazy"><figcaption>Slip-in album</figcaption></figure><figure class="gx"><img data-c="1" data-k="box_bag_1" alt="Boxes &amp; bags" loading="lazy"><figcaption>Boxes &amp; bags</figcaption></figure><figure class="gx"><img data-c="1" data-k="g_travel" alt="Travel book" loading="lazy"><figcaption>Travel book</figcaption></figure><figure class="gx"><img data-c="1" data-k="g_ganesh" alt="Ganesh wall art" loading="lazy"><figcaption>Ganesh wall art</figcaption></figure><figure class="gx"><img data-c="1" data-k="g_botanical" alt="Botanical wall art" loading="lazy"><figcaption>Botanical wall art</figcaption></figure></div></div></section>
+<section class="t2s" id="services"><div class="wrap"><div class="head rv"><h2>Services we <em>offer</em></h2></div><div class="grid"><article class="card" data-go="image-editing"><div class="im"><img data-i="svc_edit" alt="Photo Editing Services"></div><div class="tx"><small>Retouching</small><h3>Photo Editing Services</h3><p>Professional photo editors for retouching at your convenience — a team of highly skilled editors serving studios globally.</p></div></article><article class="card" data-go="album-designing"><div class="im"><img data-i="layflat_1" alt="Best Photo Album Books Designer"></div><div class="tx"><small>Design</small><h3>Best Photo Album Books Designer</h3><p>Designers manually pick your best photos and suggest suitable themes. 6–7 themes, soft-copy preview, unlimited revisions.</p></div></article><article class="card" data-go="photography"><div class="im"><img data-i="svc_photo" data-slot="photography" alt="Wedding Photography Services"></div><div class="tx"><small>Photography</small><h3>Wedding Photography Services</h3><p>15+ skilled photographers and videographers who travel across the country to capture every smile and tear.</p></div></article></div></div></section>
+<section id="retouch"><div class="wrap two"><div class="rv"><h2>Photo editing, <em>before <span class="amp">&amp;</span> after</em></h2><p style="color:var(--mut);margin:1rem 0 1.6rem">Image manipulation, background removal and foreground removal samples. Drag the handle to compare.</p><a class="btn p" href="#image-editing">Image editing services</a></div><div class="ba rv" id="ba"><img data-i="editing_before" alt="Before"><img class="top" data-i="editing_after" alt="After"><div class="ln"></div><input type="range" min="0" max="100" value="50" aria-label="Before and after"></div></div></section>
+<section class="dark" id="process"><div class="wrap"><div class="head rv"><h2>How we <em>work</em></h2></div><div class="steps"><div class="st"><b>01</b><h3>Transfer photos online</h3><p>Select your preferred album and design style, place the order and upload your photos in sequence.</p></div><div class="st"><b>02</b><h3>Get design</h3><p>We design album pages as per your choice of pattern.</p></div><div class="st"><b>03</b><h3>Printing</h3><p>We show an online preview and print on your approval.</p></div><div class="st"><b>04</b><h3>Shipping</h3><p>Receive your album in the comfort of your home.</p></div></div></div></section>
+
+<section class="t1s"><div class="wrap cta2"><h2>Let’s build your <em>photo book</em></h2><p>Ultra Album — photo album manufacturer and album designer in Mumbai.</p><a class="btn p" href="#contact">Contact us</a> <a class="btn s" href="https://ultraaalbums.com/wp-content/uploads/2021/11/Ultraa-product-Catelogue.pdf" target="_blank" rel="noopener">Download catalog</a></div></section></div>
+<main class="page t1" id="pg-about"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">About Ultraa Albums</span>
+<h1>We Redefine Wedding Albums to Give True Color That Lasts a Lifetime.</h1>
+<p>
+          We came into existence in 2010 in photography. In 2011, we could not find suitable albums to signify our photos in true colors — binding was like a pack of playing cards, or costs were unreasonable. We took it as a challenge and decided to produce high-end handcrafted albums suitable for every photographer's package.
+        </p>
+</div>
+<!-- Story Narrative -->
+<div class="g">
+<div>
+<h2>Founded in 2012 to Champion Photographers</h2>
+<p>
+            Ultraa Album was founded in 2012 in Mumbai to redefine wedding albums. We have been offering top-end albums to our clients all over India and across the globe — including the United States, the United Kingdom, New Zealand, Canada, and Europe.
+          </p>
+<p>
+            We also provide accessories like a variety of bespoke boxes, parent albums, and specialized imprinting while creating wedding albums. We offer four distinct themes of design to suit your taste, crafted by experienced designers well versed in LightRoom and Photoshop, backed by unlimited revisions to our clients.
+          </p>
+<p>
+            Since packaging is very important for international shipping, we offer complete assurance to our international clients that albums reach them in perfect, intact condition.
+          </p>
+</div>
+<div>
+<span class="kick">Our Philosophy &amp; Vision</span>
+<blockquote>
+            “When you turn pages by pages you actually revise your memories quietly. A big smile on your face indicates happiness inside you. Just as old wine is tastier, as you go down memory lane, the happier you feel.”
+          </blockquote>
+<p>
+            We facilitate effortless ordering, bespoke album design, and masterpiece handcrafting — connecting deeply with every customer's heart.
+          </p>
+</div>
+</div>
+<!-- Our Team Section -->
+<div>
+<div>
+<span class="kick">Leadership</span>
+<h2>Meet Our Leadership Team</h2>
+<p>Dedicated artisans and photography pioneers guiding our craft since 2010.</p>
+</div>
+<div class="g">
+<!-- Rajiv Panchal -->
+<div>
+<div>
+<img alt="Rajiv Panchal - Founder" data-i="team_rajiv"/>
+</div>
+<div>
+<span class="meta">Founder</span>
+<h3>Rajiv Panchal</h3>
+<p>
+                Pioneered Ultraa Albums with a commitment to true-color silver halide prints and accessible luxury for photographers globally.
+              </p>
+</div>
+</div>
+<!-- Mayank Panchal -->
+<div>
+<div>
+<img alt="Mayank Panchal - Co-Founder" data-i="team_mayank"/>
+</div>
+<div>
+<span class="meta">Co-Founder</span>
+<h3>Mayank Panchal</h3>
+<p>
+                Drives pro-lab manufacturing, international quality control, and secure shipping logistics across North America, Europe, and Asia.
+              </p>
+</div>
+</div>
+<!-- Bhairavi Panchal -->
+<div>
+<div>
+<img alt="Bhairavi Panchal - Head of Designing" data-i="team_bhairavi"/>
+</div>
+<div>
+<span class="meta">Head of Designing Department</span>
+<h3>Bhairavi Panchal</h3>
+<p>
+                Oversees editorial layout curation, color-calibrated retouching, and custom design approvals with unlimited client revisions.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Why Choose Us Grid -->
+<div>
+<div>
+<span class="kick">The Ultraa Standards</span>
+<h2>Why Choose Ultraa Albums</h2>
+</div>
+<div class="g">
+<div>
+
+<h3>Affordable Albums</h3>
+<p>
+              Exceptional handcrafted quality at highly competitive studio rates that fit cleanly into any wedding package.
+            </p>
+</div>
+<div>
+
+<h3>Reliable Quality</h3>
+<p>
+              Silver Halide pro lab prints and 0.5mm-1.0mm archival board tested meticulously before dispatch.
+            </p>
+</div>
+<div>
+
+<h3>Customer Centric</h3>
+<p>
+              Unlimited design revisions until you and your couples are 100% delighted with every spread.
+            </p>
+</div>
+<div>
+
+<h3>Complete Privacy <span class="amp">&amp;</span> Security</h3>
+<p>
+              Strict protection and confidentiality of client image assets throughout design and printing.
+            </p>
+</div>
+</div>
+</div>
+<!-- Studio Sample Banner -->
+<div class="cta">
+<span class="kick">“We Invest In You”</span>
+<h2>10% Off on Studio Samples</h2>
+<p>
+          In spite of keeping highly competitive prices, we believe every wedding photographer deserves the additional discount on Studio Samples. We do our best to support photographers with our best-in-class innovative albums.
+        </p>
+<a class="btn p" href="#contact">
+<span>Request Studio Sample →</span>
+</a>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t2" id="pg-album-designing"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">Creative Studio Service</span>
+<h1>Bespoke Album Designing with Unlimited Revisions</h1>
+<p>
+          Let our expert graphic designers craft your album pages as per your likings. We offer 6 to 7 album design themes, online soft copy previews for corrections and approvals, and unlimited revisions until you are completely satisfied!
+        </p>
+</div>
+<div class="g">
+<div>
+<span>01</span>
+<h3>6 to 7 Design Themes</h3>
+<p>
+            Choose from Classic Traditional Indian, Clean Western Minimalist, Contemporary Magazine Style, or Cinematic Storyboard layouts.
+          </p>
+</div>
+<div>
+<span>02</span>
+<h3>Online Soft Copy Proof</h3>
+<p>
+            We generate an interactive digital flipbook preview so you and your wedding couple can inspect every spread before printing.
+          </p>
+</div>
+<div>
+<span>03</span>
+<h3>Unlimited Free Revisions</h3>
+<p>
+            Yes, it is unbelievable, but true! We iterate until your couples are 100% overjoyed with their album design.
+          </p>
+</div>
+</div>
+<div class="cta">
+<h2>Ready to Design Your Next Album?</h2>
+<p>Send your photo selections online and our design team will deliver your initial soft copy preview in 3-4 working days.</p>
+<a class="btn p" href="#contact">
+<span>Submit Photos for Design</span>
+
+</a>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t3" id="pg-album-designs"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">Inspiration Gallery</span>
+<h1>Wedding Album Design Themes</h1>
+<p>Explore our curated layout themes — from opulent Indian wedding traditions to minimal Western editorial aesthetics.</p>
+</div>
+<div class="g">
+<div>
+<img alt="Indian Wedding Classic Design" data-i="wedding_d1"/>
+<div>
+<span class="kick">Theme 01</span>
+<h3>Indian Wedding Classic Design</h3>
+<p>
+              Celebrates rich colors, intricate mandap details, jewelry close-ups, and dramatic sangeet and baraat montages with balanced borders.
+            </p>
+<a href="#contact">Choose This Theme →</a>
+</div>
+</div>
+<div>
+<img alt="Western Wedding Album Design" data-i="wedding_e1"/>
+<div>
+<span class="kick">Theme 02</span>
+<h3>Western Wedding Album Design</h3>
+<p>
+              Emphasizes generous white space, cinematic full-bleed panoramic portraits, quiet typography, and timeless candid moments.
+            </p>
+<a href="#contact">Choose This Theme →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t4" id="pg-blogs"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">Editorial Insights</span>
+<h1>Our Blogs <span class="amp">&amp;</span> Industry Guides</h1>
+<p>
+          Are you looking for expert retouching, album preservation tips, or advice on choosing between Flush Mount and Layflat albums? Explore our latest articles.
+        </p>
+</div>
+<div class="g">
+<article>
+<div>
+<img alt="Flush mount guide" data-i="flush_mount_1"/>
+</div>
+<div>
+<div class="meta">
+<span>Album Craftsmanship</span>
+<span>·</span>
+<span>March 2026</span>
+</div>
+<h3>Why 1.0mm Archival Board is the Standard for Luxury Heirlooms</h3>
+<p>
+              Explore why machine-made glued photobooks fail over time and how Silver Halide hand-bound flush mount pages withstand decades of turning.
+            </p>
+<a href="#flush-mount-album">Read Guide →</a>
+</div>
+</article>
+<article>
+<div>
+<img alt="Photo retouching guide" data-i="editing_after"/>
+</div>
+<div>
+<div class="meta">
+<span>Studio Retouching</span>
+<span>·</span>
+<span>February 2026</span>
+</div>
+<h3>Professional Retouching for Wedding Photographers</h3>
+<p>
+              Don’t hesitate to elevate your photography. We have a team of highly skilled professionals who give you the best photo editing services.
+            </p>
+<a href="#image-editing">Read Guide →</a>
+</div>
+</article>
+<article>
+<div>
+<img alt="Packaging guide" data-i="luxury_casket"/>
+</div>
+<div>
+<div class="meta">
+<span>Packaging &amp; Delivery</span>
+<span>·</span>
+<span>January 2026</span>
+</div>
+<h3>The Art of Presentation: Wooden Caskets <span class="amp">&amp;</span> Carry Cases</h3>
+<p>
+              How luxury packaging doubles perceived studio value for destination wedding clients in the UK, USA, and Europe.
+            </p>
+<a href="#box-and-bags">Read Guide →</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t1" id="pg-box-and-bags-for-uk"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">UK Presentation</span>
+<h1>Bespoke Boxes <span class="amp">&amp;</span> Carry Bags for the UK</h1>
+<p>Designer wooden structure frames wrapped in leatherette with acrylic strip or cameo windows.</p>
+</div>
+<div class="g">
+<div>
+<p>
+                Protect heavy wedding albums during client handoffs. Includes optional suitcase handle and purse handle styling for effortless transport.
+              </p>
+<a class="btn p" href="#contact">Order UK Presentation Box</a>
+</div>
+<div>
+<img alt="Boxes for UK" data-i="box_bag_1"/>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t2" id="pg-box-and-bags"><div class="wrap prose">
+<section>
+<div>
+<div class="pdp">
+<div>
+<div>
+<img alt="Boxes and Bags" data-i="box_bag_1"/>
+</div>
+
+</div>
+<div>
+<span class="kick">Packaging &amp; Protection</span>
+<h1>Boxes <span class="amp">&amp;</span> Bags</h1>
+<div class="meta">
+<span>Hard Wooden Structure Frame</span>
+<span>·</span>
+<span>Leatherette Wrap</span>
+<span>·</span>
+<span>Carry Handles Available</span>
+</div>
+<p>
+            Refined over the years, our regular presentation box has been a popular feature of our range. It combines two elements: a designer hard wooden structure frame wrapped in a leatherette material, and a beautiful photo or acrylic strip on the top cover.
+          </p>
+<div>
+<h3>Cover Variations Available</h3>
+<ul>
+<li>• Full photo wrap cover</li>
+<li>• Acrylic crystal strip inset</li>
+<li>• Cameo window with portrait image</li>
+<li>• Full leather wrap with couple name printed or foil embossed</li>
+<li>• Suitcase or handbag handle option for effortless carrying of heavy albums</li>
+</ul>
+</div>
+<div>
+<strong>Standard Inclusions:</strong> Unless you choose an upgrade, all albums are presented in our standard soft protective leather bag at no additional cost.
+          </div>
+<a class="btn p" href="#contact">
+<span>Inquire About Packaging</span>
+
+</a>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t3" id="pg-faq"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">Help &amp; Questions</span>
+<h1>Frequently Asked Questions</h1>
+<p>
+          Find answers regarding our flush mount substrates, paper longevity, unlimited design revisions, international shipping, and 10% studio sample discounts.
+        </p>
+</div>
+<div>
+<!-- Q1 -->
+<div class="fq">
+
+<div>
+<div>
+              Our Flush Mount albums are constructed with Silver Halide photographic prints mounted onto a thick 0.5mm to 1.0mm archival board core, delivering rigid, non-bending panoramic pages with zero center gutter cuts. Our Layflat albums use a thinner, lighter substrate that allows up to 50 spreads economically while preserving seamless panoramic double-page viewing with no bulging.
+            </div>
+</div>
+</div>
+<!-- Q2 -->
+<div class="fq">
+
+<div>
+<div>
+              Through our “We Invest In You” initiative, professional wedding photographers receive an automatic 10% discount on studio sample albums to show prospective wedding couples. Simply mark your order as a studio sample or check the sample discount box in our live customizer.
+            </div>
+</div>
+</div>
+<!-- Q3 -->
+<div class="fq">
+
+<div>
+<div>
+              Yes! When you use our Album Designing service, our artists design your spreads across your choice of 6 to 7 themes and share an online soft copy preview. We allow unlimited revisions until you and your clients are completely satisfied before we proceed to print.
+            </div>
+</div>
+</div>
+<!-- Q4 -->
+<div class="fq">
+
+<div>
+<div>
+              We print exclusively on Fuji Crystal Archive silver halide photographic paper with a luster/silk finish. This ensures accurate color reproduction, pure clean whites, and lifetime archival resistance against fading.
+            </div>
+</div>
+</div>
+<!-- Q5 -->
+<div class="fq">
+
+<div>
+<div>
+              Packaging is critical for international logistics. We package every album in custom-fitted presentation boxes, soft protective bags, reinforced corner cushions, and moisture-barrier air crates to guarantee albums arrive in pristine, intact condition across the US, UK, Canada, Europe, NZ, and India.
+            </div>
+</div>
+</div>
+<!-- Q6 -->
+<div class="fq">
+
+<div>
+<div>
+              Album design proofs are typically delivered within 3-4 working days. Following your final approval, hand-binding and diamond polishing take 7-10 business days. Priority air express dispatch is available worldwide.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t4" id="pg-flush-mount-album-for-uk"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">United Kingdom Studio Edition</span>
+<h1>Flush Mount Albums for UK Wedding Photographers</h1>
+<p>
+              Ultraa Albums partners with destination and documentary wedding photographers across England, Scotland, Wales, and Northern Ireland, offering true-color Fuji Silver Halide prints and 1.0mm archival board with express courier delivery.
+            </p>
+</div>
+<div class="g">
+<div>
+<h2>Why UK Photographers Choose Ultraa</h2>
+<p>
+                With competitive exchange rates and exceptional craftsmanship, UK studios enjoy substantial profit margins while delivering albums that exceed the quality of local domestic binders.
+              </p>
+<ul>
+<li>• 10% Studio Sample Discount for registered UK photographers</li>
+<li>• Unlimited online soft copy proof revisions</li>
+<li>• Seamless door-to-door express delivery with tracking</li>
+<li>• Full range of acrylic crystal, genuine leather, and fine linen covers</li>
+</ul>
+<a class="btn p" href="#contact">Request UK Studio Pricing</a>
+</div>
+<div>
+<img alt="UK Flush Mount Album" data-i="flush_mount_1"/>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t1" id="pg-flush-mount-album"><div class="wrap prose">
+<section>
+<div>
+<div class="pdp">
+<!-- Gallery Left -->
+<div>
+<div>
+<img alt="Ultraa Flush Mount Album" data-i="flush_mount_1"/>
+</div>
+
+</div>
+<!-- Details Right -->
+<div>
+<span class="kick">Flagship Heirloom Collection</span>
+<h1>Flush Mount Album</h1>
+<div class="meta">
+<span>Fuji Crystal Archive Silver Halide</span>
+<span>·</span>
+<span>1.0mm Archival Board</span>
+<span>·</span>
+<span>100% Quality Guarantee</span>
+</div>
+<p>
+            Keep your memories alive with our Flush Mount Albums. It’s the perfect way to cherish those special moments forever. Ultraa Albums creates all of our albums HAND BOUND. Our album pages aren’t solely relying on glue to secure them in — they are relying on bookbinding techniques that were used years ago when individual books were made by hand.
+          </p>
+<p>
+            When comparing our album to a machine-made flush mount album, you can expect that the hand of a skilled artisan using superior materials will offer a more precise fit and a longer album life.
+          </p>
+<!-- Key Highlights -->
+<div>
+<h3>Craftsmanship Highlights</h3>
+<ul>
+<li>
+
+<span><strong>Panoramic Spreads:</strong> Hand-bound with Silver Halide prints and a thick white/black substrate in between, providing a crispy, straight panoramic view of the entire spread with no center gutter cut.</span>
+</li>
+<li>
+
+<span><strong>Archival Page Thickness:</strong> Thick archival board is 0.5mm–1.0mm thick. Prints are 0.5mm and final page thickness is 1.0mm as standard (1.5mm extra-thick option available) to withstand everyday viewing.</span>
+</li>
+<li>
+
+<span><strong>Fuji Crystal Archive Paper:</strong> Silver halide photo paper with luster finish for pure clean whites, accurate color reproduction, and lifetime image stability.</span>
+</li>
+</ul>
+</div>
+<!-- Specifications Table -->
+<h3>Technical Specifications</h3>
+<table class="spec">
+<tbody>
+<tr><td>Paper Type</td><td>Fuji Crystal Archive Silver Halide (Luster / Silk finish)</td></tr>
+<tr><td>Substrate Core</td><td>0.5mm – 1.0mm Archival Board (1.5mm extra thick available)</td></tr>
+<tr><td>Standard Binding</td><td>Panoramic layflat bookbinding with zero center gutter</td></tr>
+<tr><td>Popular Sizes</td><td>12×18″, 12×12″, 10×10″, 9×12″, 6×8″ Parent Album</td></tr>
+<tr><td>Cover Materials</td><td>Acrylic Crystal, Full-Wrap Italian Leather, Fine Linen, Wood, Canvas</td></tr>
+<tr><td>Imprinting Styles</td><td>Laser Engraving, Gold / Silver / Rose Gold Foil, UV Printing</td></tr>
+<tr><td>Turnaround Time</td><td>7 – 10 business days + worldwide air express dispatch</td></tr>
+</tbody>
+</table>
+<!-- Actions -->
+<div>
+<a class="btn p" href="#home">
+<span>Configure in Live Studio</span>
+
+</a>
+<a class="btn s" href="#contact">
+<span>Request Custom Quote</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t2" id="pg-image-editing-for-uk"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">UK Creative Outsourcing</span>
+<h1>Image Editing <span class="amp">&amp;</span> Retouching for UK Photographers</h1>
+<p>Overnight turnaround on culling, color balancing, and beauty retouching by senior artists with 10+ years experience.</p>
+</div>
+<div class="g">
+<div>
+<p>
+                UK wedding photographers trust our remote editing division to handle peak season volume. We seamlessly match your Lightroom presets and editing aesthetic.
+              </p>
+<a class="btn p" href="#contact">Send Test RAW Images</a>
+</div>
+<div>
+<img alt="Image editing for UK" data-i="editing_after"/>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t3" id="pg-image-editing"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">Digital Artistry</span>
+<h1>Image Correction <span class="amp">&amp;</span> Pro Retouching Services</h1>
+<p>
+          Ultraa Albums is a 10+ years experienced organization working for professional photographers and studios across the globe. We digitally restore and enhance the quality of images faithfully without harming original prints.
+        </p>
+</div>
+<!-- Before/After Slider Component -->
+<div>
+<h2>Interactive Before <span class="amp">&amp;</span> After Retouching</h2>
+<p>
+          Drag the center handle to see real skin tone balancing, blemish removal, and color saturation enhancements performed by our senior retouchers.
+        </p>
+<div>
+<div>
+<img alt="Before Retouching" data-i="editing_before"/>
+<img alt="After Retouching" data-i="editing_after"/>
+
+</div>
+<div>
+<span>← Raw Photo (Before)</span>
+<span>Hand Retouched (After) →</span>
+</div>
+</div>
+</div>
+<!-- Services List -->
+<div>
+<h2>Our Photo Retouching Services Include:</h2>
+<div class="g">
+<div>
+<h3>Advanced Clipping Paths</h3>
+<p>Precise multi-point cutouts and background extractions for e-commerce and creative composites.</p>
+</div>
+<div>
+<h3>Brightness <span class="amp">&amp;</span> Contrast</h3>
+<p>Balancing exposure across backlit ceremony scenes and high-contrast indoor receptions.</p>
+</div>
+<div>
+<h3>Beauty <span class="amp">&amp;</span> Glamour Retouching</h3>
+<p>Removing blemishes, softening skin texture while preserving pores, and eye sparkle enhancement.</p>
+</div>
+<div>
+<h3>Object Removal</h3>
+<p>Erasing unwanted background guests, exit signs, microphones, or wires cleanly from portraits.</p>
+</div>
+</div>
+</div>
+<div class="cta">
+<h2>Need Retouching for Your Wedding Assignments?</h2>
+<p>Send a batch of sample RAW files today to experience our speed and color precision.</p>
+<a class="btn p" href="#contact">
+<span>Inquire About Editing</span>
+
+</a>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t4" id="pg-landing-2023"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">#BestPhotoAlbums</span>
+<h1>Ultraa Albums — Transparent Pricing Plans</h1>
+<p>
+          Ready to turn your moments into lasting memories? Join Ultraa Albums today. Whether it’s a wedding, vacation, or family gathering, every moment is worth celebrating.
+        </p>
+</div>
+<div class="g">
+<!-- Essential Memories -->
+<div>
+<div>
+<span class="kick">Starter Heirloom</span>
+<h3>Essential Memories</h3>
+<div>₹9,999 <span>/ album (~$120)</span></div>
+<p>
+              Ideal for parent albums, anniversary celebrations, or intimate portrait sessions.
+            </p>
+<ul>
+<li>• 20 Spreads (40 Pages)</li>
+<li>• 0.5mm Slim Archival Core</li>
+<li>• Photo Wrap Hardcover</li>
+<li>• Soft Protective Bag Included</li>
+</ul>
+</div>
+<a class="btn s" href="#contact">Select Essential</a>
+</div>
+<!-- Classic Collection -->
+<div>
+<div>
+<span class="kick">Most Popular</span>
+<h3>Classic Collection</h3>
+<div>₹14,999 <span>/ album (~$185)</span></div>
+<p>
+              Our signature wedding photographer choice with full leatherette wrap and panoramic spreads.
+            </p>
+<ul>
+<li>• 30 Spreads (60 Pages)</li>
+<li>• 1.0mm Archival Board Core</li>
+<li>• Full Leatherette or Fine Linen</li>
+<li>• Gold Foil Monogram Stamping</li>
+<li>• 10% Studio Sample Discount Eligible</li>
+</ul>
+</div>
+<a class="btn p" href="#contact">Select Classic</a>
+</div>
+<!-- Premium Experience -->
+<div>
+<div>
+<span class="kick">Enhanced Luxury</span>
+<h3>Premium Experience</h3>
+<div>₹21,500 <span>/ album (~$260)</span></div>
+<p>
+              Featuring diamond-polished crystal acrylic covers and bespoke matching presentation box.
+            </p>
+<ul>
+<li>• 40 Spreads (80 Pages)</li>
+<li>• Diamond Acrylic Crystal Cover</li>
+<li>• Matching Hard Wooden Box</li>
+<li>• Unlimited Design Revisions</li>
+</ul>
+</div>
+<a class="btn s" href="#contact">Select Premium</a>
+</div>
+<!-- Ultimate Legacy -->
+<div>
+<div>
+<span class="kick">Heirloom Casket Set</span>
+<h3>Ultimate Legacy</h3>
+<div>₹31,500 <span>/ album (~$380)</span></div>
+<p>
+              Complete luxury suite with handcrafted wooden casket, couple's debossed album, and two 6x8 parent books.
+            </p>
+<ul>
+<li>• 50 Spreads (100 Pages)</li>
+<li>• Custom Wooden Casket Included</li>
+<li>• 2 Complimentary Parent Albums (6x8)</li>
+<li>• Priority White-Glove Air Dispatch</li>
+</ul>
+</div>
+<a class="btn s" href="#contact">Select Ultimate</a>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t1" id="pg-layflat"><div class="wrap prose">
+<section>
+<div>
+<div class="pdp">
+<!-- Gallery Left -->
+<div>
+<div>
+<img alt="Ultraa Layflat Album" data-i="layflat_1"/>
+</div>
+
+</div>
+<!-- Details Right -->
+<div>
+<span class="kick">Panoramic Viewing Experience</span>
+<h1>Layflat Album</h1>
+<div class="meta">
+<span>Pro Lab Printing</span>
+<span>·</span>
+<span>0.5mm Slim Archival Core</span>
+<span>·</span>
+<span>Up to 50 Spreads</span>
+</div>
+<p>
+            Our Layflat Albums are very similar to our Flush Mount Album except the substrate is thinner and lighter in weight, which allows more pages and is more economical. It is essentially a lighter Flush Mount Album.
+          </p>
+<p>
+            It features stunning 2-page spreads with no bulging and no gutter at the center of the page. These books are printed on rich, high-density colors via pro lab photo printing. The great thing about Layflat is that you can print an image across a double page spread without worrying about folds interrupting your visual statement.
+          </p>
+<div>
+<h3>Ideal Use Cases</h3>
+<p>
+              Whether it’s travel memories, your wedding, a milestone celebration, a family trip, or professional portfolios — interior designers, fashion designers, makeup artists, and wedding photographers all trust layflat books for showing their creative work.
+            </p>
+</div>
+<table class="spec">
+<tbody>
+<tr><td>Page Thickness</td><td>0.5mm Lightweight Core (holds up to 50 spreads seamlessly)</td></tr>
+<tr><td>Binding</td><td>Panoramic Lay Flat with no center gutter gap</td></tr>
+<tr><td>Printing</td><td>High-density Pro Lab Silver Halide photographic printing</td></tr>
+<tr><td>Cover Options</td><td>Full Leatherette, Photo Wrap Hardcover, Woven Linen, Cameo Window</td></tr>
+<tr><td>Sizes Available</td><td>12×18″, 12×12″, 10×10″, 9×12″, 8×8″, 6×8″</td></tr>
+</tbody>
+</table>
+<div>
+<a class="btn p" href="#home">
+<span>Customize Layflat Album</span>
+
+</a>
+<a class="btn s" href="#contact">
+<span>Request Quote</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t2" id="pg-luxury-albums-for-uk"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">UK Luxury Edition</span>
+<h1>Luxury Albums <span class="amp">&amp;</span> Wooden Caskets for UK Studios</h1>
+<p>Personalized wooden caskets and diamond-polished acrylic covers crafted for discerning UK couples.</p>
+</div>
+<div class="g">
+<div>
+<p>
+                Designed specifically for luxury estate weddings in the Cotswolds, Surrey, and London. Each album is hand-bound with silver halide prints and presented in a personalized wooden casket with laser-engraved monogramming.
+              </p>
+<a class="btn p" href="#contact">Inquire for UK Delivery</a>
+</div>
+<div>
+<img alt="Luxury casket for UK" data-i="luxury_casket"/>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t3" id="pg-luxury-albums"><div class="wrap prose">
+<section>
+<div>
+<div class="pdp">
+<div>
+<div>
+<img alt="Ultraa Luxury Casket Album" data-i="luxury_casket"/>
+</div>
+
+</div>
+<div>
+<span class="kick">The Pinnacle of Presentation</span>
+<h1>Luxury Albums</h1>
+<div class="meta">
+<span>Wooden Casket Included</span>
+<span>·</span>
+<span>Diamond Polished Acrylic</span>
+<span>·</span>
+<span>Handcrafted Leather</span>
+</div>
+<p>
+            We make luxury albums in such a way that keeps all your elegant and precious moments safe. This way, when you look back years from now, you’ll still feel like you are reliving the moment. We use beautiful handcrafted leather and a wooden casket to make these luxury heirlooms.
+          </p>
+<p>
+            The casket and album can be personalised with the person’s or couple’s name in a luxurious font. Printing your photos on flat, flush mounted pages gives your album an unparalleled luxurious and elegant presence. You say it and we present it — choosing from acrylic crystal, leather, hardcover, linen, wood, canvas, to bespoke color and design layouts.
+          </p>
+<div>
+<h3>Acrylic-Crystal Cover Pad</h3>
+<p>
+              The cover photo is mounted in crystal-clear acrylic for a glassy look. Sides are finely tapered and edges slightly rounded, followed by diamond polishing for exclusive results. The back and spine are leatherette in your choice of color, with rounded spine and Italic binding.
+            </p>
+<h3>Premium Canvas Covers with Protective Varnish</h3>
+<p>
+              Printed on bright white poly-cotton blend canvas with zero color shift issues, coated with protective varnish against moisture, abrasion, and UV damage.
+            </p>
+</div>
+<table class="spec">
+<tbody>
+<tr><td>Package Inclusions</td><td>Handcrafted Album + Custom Heirloom Wooden Casket / Box</td></tr>
+<tr><td>Personalization</td><td>Foil Monogram / Laser Engraving on both Casket &amp; Album</td></tr>
+<tr><td>Cover Options</td><td>Acrylic Crystal Glass, Handcrafted Italian Leather, Fine Linen, Wood</td></tr>
+<tr><td>Core Construction</td><td>1.0mm Archival Board, Fuji Silver Halide Panoramic Spreads</td></tr>
+<tr><td>Sizes</td><td>12×18″, 12×12″, 10×10″</td></tr>
+</tbody>
+</table>
+<div>
+<a class="btn p" href="#contact">
+<span>Order Luxury Casket Album</span>
+
+</a>
+<a class="btn s" href="#box-and-bags">View Matching Boxes</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t4" id="pg-photo-book-for-uk"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">UK Photobooks</span>
+<h1>Modern Photo Books for UK Clients</h1>
+<p>Non-tearable paper with feather-touch matte or glossy finish in 6x8, 9x12, and 12x18 sizes.</p>
+</div>
+<div class="g">
+<div>
+<p>
+                Ideal for contemporary coffee table photobooks, engagement shoots, and parent duplicates. Full flat openable binding with no curved center spine gutter.
+              </p>
+<a class="btn p" href="#contact">Inquire for UK Delivery</a>
+</div>
+<div>
+<img alt="Photobook for UK" data-i="photobook_1"/>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t1" id="pg-photo-book"><div class="wrap prose">
+<section>
+<div>
+<div class="pdp">
+<div>
+<div>
+<img alt="Ultraa Handcrafted Photo Book" data-i="photobook_1"/>
+</div>
+
+</div>
+<div>
+<span class="kick">Modern Editorial Photobooks</span>
+<h1>Photo Book</h1>
+<div class="meta">
+<span>Non-Tearable Paper</span>
+<span>·</span>
+<span>Glossy, Matte &amp; Feather Touch</span>
+<span>·</span>
+<span>Full Flat Openable</span>
+</div>
+<p>
+            Photo Books can be used to treasure precious moments from your child’s birth to high school graduation, or for exhibiting your work as an artist. We are a Photo Books Manufacturer and counted amongst leading suppliers globally.
+          </p>
+<p>
+            We provide you classical types of modern photobooks. We have non-tearable paper printed with Glossy, Matte, and Feather Touch finish. Our speciality is Full Flat openable books with no curved pages from the center.
+          </p>
+<table class="spec">
+<tbody>
+<tr><td>Paper Technology</td><td>High-grade Non-Tearable Paper with anti-scratch coating</td></tr>
+<tr><td>Finish Options</td><td>Feather Touch, Velvety Matte, High Gloss</td></tr>
+<tr><td>Binding</td><td>Full Flat Openable Binding (no curve in center)</td></tr>
+<tr><td>Available Sizes</td><td>6×8″, 9×12″, 12×18″ Wedding Format</td></tr>
+<tr><td>Cover Options</td><td>Hardcover Photo Wrap, Matte Lamination, Leatherette</td></tr>
+</tbody>
+</table>
+<div>
+<a class="btn p" href="#contact">
+<span>Order Photo Book</span>
+
+</a>
+<a class="btn s" href="#home">Configure Live</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t2" id="pg-photo-editing-and-album-design"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">Complete Creative Suite</span>
+<h1>Photo Editing <span class="amp">&amp;</span> Album Design Solutions</h1>
+<p>
+          Every moment you celebrate is a beautiful memory. Shouldn’t the pictures you click and edit also be a masterpiece? Ultraa Albums is a leading photo editing and album company in Mumbai, carving a niche for beauty retouching, clipping paths, and vintage photo restoration.
+        </p>
+</div>
+<div class="g">
+<div>
+<h3>Photo Clipping Path Service</h3>
+<p>
+            We carefully extract objects, people, or focal points from complex backgrounds. Rest easy knowing you have master artists handling each curve.
+          </p>
+</div>
+<div>
+<h3>Old Photo Restoration</h3>
+<p>
+            Photos fade and deteriorate over the years. Restore precious family pictures from grandparents' or parents' times to keep memories safe longer.
+          </p>
+</div>
+<div>
+<h3>Imperfection Removal <span class="amp">&amp;</span> Tone</h3>
+<p>
+            Includes color and tone correction, removing blemishes and dark circles, and fine-tuning brightness, shadow contrast, and saturation.
+          </p>
+</div>
+</div>
+<div class="cta">
+<h2>Bundle Editing <span class="amp">&amp;</span> Album Binding</h2>
+<p>Enjoy our combined package: full wedding photo editing, sequence design, and handcrafted flush mount printing under one roof.</p>
+<a class="btn p" href="#contact">
+<span>Inquire for Package Rates</span>
+
+</a>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t3" id="pg-photography-for-uk"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">Destination Weddings</span>
+<h1>Photography <span class="amp">&amp;</span> Videography for UK Clients</h1>
+<p>15+ skilled photographers capturing multi-day celebrations with artistic candid vision.</p>
+</div>
+<div class="g">
+<div>
+<p>
+                Planning a destination wedding in India, Europe, or the UK? Our team provides full multi-day coverage, drone cinematography, and immediate soft copy delivery.
+              </p>
+<a class="btn p" href="#contact">Book Photography Coverage</a>
+</div>
+<div>
+<img alt="Destination wedding" data-i="svc_photo"/>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t4" id="pg-photography"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">Cinematic Storytelling</span>
+<h1>Wedding Photography <span class="amp">&amp;</span> Videography Services</h1>
+<p>
+          We help people elevate their wedding experience with great photography and videography. We travel across the country creating an incredible montage of the most priceless moments.
+        </p>
+</div>
+<div class="g">
+<div>
+<h2>15+ Skilled Artists Behind the Lens</h2>
+<p>
+            With our team of 15+ skilled photographers and videographers, you can rest assured that every smile, every tear, and every heartfelt moment will be captured with precision and passion.
+          </p>
+<p>
+            Together with the essential formal portraits of your wedding party, family, and friends, you will receive a complete collection of images capturing the signature moments of your day. Candid wedding photography is our forte, documented as an artistic statement as totally unique as you!
+          </p>
+<a class="btn p" href="#contact">
+<span>Book Photography Team</span>
+
+</a>
+</div>
+<div>
+<img alt="Wedding ceremony shot" data-i="svc_photo"/>
+<img alt="Couple portrait" data-i="wedding_e1"/>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t1" id="pg-privacy-policy"><div class="wrap prose">
+<section>
+<div>
+<span class="kick">Security &amp; Trust</span>
+<h1>Privacy Policy</h1>
+<p class="meta">Last Updated: 2026 · Ultraa Albums</p>
+<div>
+<p>
+          This privacy policy will help you understand how Ultraa Albums uses and protects the data you provide to us when you visit and use www.ultraaalbums.com. We reserve the right to change this policy at any given time, of which you will be promptly updated.
+        </p>
+<h3>What User Data We Collect</h3>
+<p>
+          When you visit the website, we may collect: Your contact information and email address; your IP address; product preferences and customizer configurations; and image files uploaded for album design and pro-lab printing.
+        </p>
+<h3>Complete Privacy <span class="amp">&amp;</span> Security of Your Images</h3>
+<p>
+          We treat client wedding photos and family memories with the highest confidentiality. Your uploaded photographs are stored in isolated encrypted directories strictly accessible by our assigned retouching artists and binding technicians. We never sell, lease, or distribute private client photographs to third parties.
+        </p>
+<h3>Our Cookie Policy</h3>
+<p>
+          We use functional cookies to remember your album customizer preferences, active theme choices, and cart inquiries so you enjoy a seamless experience when returning to our website.
+        </p>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t2" id="pg-products"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">Catalog &amp; Formats</span>
+<h1>Our Handcrafted Album <span class="amp">&amp;</span> Photobook Collection</h1>
+<p>
+          Explore our range of artisanal wedding albums, layflat books, heirloom wooden caskets, and presentation boxes. Every product is handcrafted using Silver Halide archival papers and premium European materials.
+        </p>
+</div>
+<!-- Products Grid -->
+<div>
+<!-- Flush Mount -->
+<article class="pc">
+<div>
+<img alt="Flush Mount Album" data-i="flush_mount_1"/>
+<span class="tg">Flagship</span>
+</div>
+<div>
+<div>
+<span>0.5mm - 1.0mm Archival Board</span>
+<h3 class="pt"><a href="#flush-mount-album">Flush Mount Album</a></h3>
+<p>
+                Hand-bound with Silver Halide prints and a thick white/black substrate. Panoramic 2-page spreads without center cuts or gutters.
+              </p>
+</div>
+<div>
+<span>Sizes: 12x18, 12x12, 10x10</span>
+<a href="#flush-mount-album">View Details →</a>
+</div>
+</div>
+</article>
+<!-- Layflat -->
+<article class="pc">
+<div>
+<img alt="Layflat Album" data-i="layflat_1"/>
+<span class="tg">Lightweight</span>
+</div>
+<div>
+<div>
+<span>Pro Lab Printing</span>
+<h3 class="pt"><a href="#layflat">Layflat Album</a></h3>
+<p>
+                A lighter flush mount album in weight. Seamless panoramic spreads with thinner substrate allowing more pages economically.
+              </p>
+</div>
+<div>
+<span>Up to 50 Spreads</span>
+<a href="#layflat">View Details →</a>
+</div>
+</div>
+</article>
+<!-- Luxury Albums -->
+<article class="pc">
+<div>
+<img alt="Luxury Albums" data-i="luxury_casket"/>
+<span class="tg">Heirloom Casket</span>
+</div>
+<div>
+<div>
+<span>Wooden Casket Included</span>
+<h3 class="pt"><a href="#luxury-albums">Luxury Albums</a></h3>
+<p>
+                Handcrafted leather and custom wooden casket personalised with couple's name in luxurious debossed font. Diamond-polished acrylic covers.
+              </p>
+</div>
+<div>
+<span>Leather &amp; Casket Set</span>
+<a href="#luxury-albums">View Details →</a>
+</div>
+</div>
+</article>
+<!-- Photo Book -->
+<article class="pc">
+<div>
+<img alt="Photo Book" data-i="photobook_1"/>
+<span class="tg">Non-Tearable</span>
+</div>
+<div>
+<div>
+<span>Coffee Table Style</span>
+<h3 class="pt"><a href="#photo-book">Handcrafted Photo Book</a></h3>
+<p>
+                Printed on non-tearable paper with glossy, matte, or feather-touch finish. Full flat openable binding with no curved center pages.
+              </p>
+</div>
+<div>
+<span>Sizes: 6x8, 9x12, 12x18</span>
+<a href="#photo-book">View Details →</a>
+</div>
+</div>
+</article>
+<!-- Wedding Photo Albums -->
+<article class="pc">
+<div>
+<img alt="Wedding Photo Albums" data-i="wedding_d1"/>
+<span class="tg">Wedding Heirlooms</span>
+</div>
+<div>
+<div>
+<span>Ceremony &amp; Reception</span>
+<h3 class="pt"><a href="#wedding-photo-albums">Wedding Photo Albums</a></h3>
+<p>
+                Tailored for wedding photographers and couples. Preserving signature moments with archival longevity and bespoke cover foil personalization.
+              </p>
+</div>
+<div>
+<span>Archival Fuji Paper</span>
+<a href="#wedding-photo-albums">View Details →</a>
+</div>
+</div>
+</article>
+<!-- Boxes and Bags -->
+<article class="pc">
+<div>
+<img alt="Boxes and Bags" data-i="box_bag_1"/>
+<span class="tg">Protection &amp; Cases</span>
+</div>
+<div>
+<div>
+<span>Bespoke Cases</span>
+<h3 class="pt"><a href="#box-and-bags">Boxes <span class="amp">&amp;</span> Bags</a></h3>
+<p>
+                Designer wooden structure wrapped in leatherette with acrylic strip or cameo window. Optional suitcase and handbag carry handles.
+              </p>
+</div>
+<div>
+<span>Carry Cases &amp; Pearl Boxes</span>
+<a href="#box-and-bags">View Details →</a>
+</div>
+</div>
+</article>
+<!-- Slip In Albums -->
+<article class="pc">
+<div>
+<img alt="Slip In Albums" data-i="slip_in_1"/>
+<span class="tg">Up to 300 Prints</span>
+</div>
+<div>
+<div>
+<span>Polypropylene Pockets</span>
+<h3 class="pt"><a href="#slip-in-albums">Slip In Albums</a></h3>
+<p>
+                Photo-safe dimpled polypropylene moisture-proof pockets bonded with ultrasonic sealing machines. Perfect for loose prints and gift albums.
+              </p>
+</div>
+<div>
+<span>Ultrasonic Sealing • PVC</span>
+<a href="#slip-in-albums">View Details →</a>
+</div>
+</div>
+</article>
+</div>
+<!-- Studio Customizer Banner -->
+<div class="cta">
+<span class="kick">Configurator</span>
+<h2>Customize Any Album Format Online</h2>
+<p>
+          Use our interactive live customizer to configure size, cover material, pastel shade, and custom foil monogram debossing with instant price calculation.
+        </p>
+<a class="btn p" href="#home">
+<span>Launch Live Customizer</span>
+
+</a>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t3" id="pg-slip-in-albums-for-uk"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">UK Print Storage</span>
+<h1>Slip In Albums for UK Studios</h1>
+<p>Holds up to 300 loose prints in photo-safe dimpled polypropylene moisture-proof pockets.</p>
+</div>
+<div class="g">
+<div>
+<p>
+                Ultrasonic sealed pockets ensure permanent archival bonding. Excellent for loose 4x6 print orders, family photo gifts, or studio promotional giveaways.
+              </p>
+<a class="btn p" href="#contact">Inquire About UK Orders</a>
+</div>
+<div>
+<img alt="Slip in album for UK" data-i="slip_in_1"/>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t4" id="pg-slip-in-albums"><div class="wrap prose">
+<section>
+<div>
+<div class="pdp">
+<div>
+<div>
+<img alt="Slip In Albums" data-i="slip_in_1"/>
+</div>
+</div>
+<div>
+<span class="kick">Everyday Memory Keeping</span>
+<h1>Slip In Albums</h1>
+<div class="meta">
+<span>Up to 300 Photos</span>
+<span>·</span>
+<span>Moisture-Proof Polypropylene</span>
+<span>·</span>
+<span>Ultrasonic Sealing</span>
+</div>
+<p>
+            Most of us have loose prints lying in our homes, or old albums torn apart over years. Our inexpensive slip-in albums are the best way to hold them securely. We resort exclusively to photo-safe, dimpled surface polypropylene (moisture-proof) pockets, so that photographs last a lifetime.
+          </p>
+<p>
+            We employ ultrasonic sealing machines for permanently securing plastic pockets to covers. Slip In Albums come with PVC white pockets and hold up to 300 photo capacity. Covers can be leather in any color you desire, or full wrap photo covers.
+          </p>
+<table class="spec">
+<tbody>
+<tr><td>Pocket Material</td><td>Photo-safe dimpled polypropylene (moisture-proof)</td></tr>
+<tr><td>Bonding Method</td><td>Ultrasonic sealing technology</td></tr>
+<tr><td>Capacity</td><td>Up to 300 photos (4×6″ standard)</td></tr>
+<tr><td>Cover Options</td><td>Full Wrap Floral Designs, Leatherette, Custom Studio Branding</td></tr>
+<tr><td>Bulk / Lab Orders</td><td>Custom lab branding available for complimentary customer gifting</td></tr>
+</tbody>
+</table>
+<a class="btn p" href="#contact">
+<span>Order Slip In Albums</span>
+
+</a>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t1" id="pg-terms-and-condition"><div class="wrap prose">
+<section>
+<div>
+<span class="kick">Legal</span>
+<h1>Terms <span class="amp">&amp;</span> Conditions</h1>
+<p class="meta">Last Updated: 2026 · Ultraa Albums</p>
+<div>
+<h2>Website Terms <span class="amp">&amp;</span> Services Agreement</h2>
+<p>
+          The Website Terms &amp; Conditions is a legal document that details the terms and conditions that the user must abide by while using the website ultraaalbums.com. The agreement details the license of copyright in the website, disclaimer of liability, acceptable use clause, variation clause, and applicable law and jurisdiction.
+        </p>
+<h3>Usage</h3>
+<p>
+          All visitors, photographers, and clients using this website agree to comply with all applicable local, national, and international laws. Reproduction, duplication, or copying of website design, images, or branding without prior written consent from Ultraa Albums is strictly prohibited.
+        </p>
+<h3>Orders <span class="amp">&amp;</span> Approvals</h3>
+<p>
+          Custom album orders are manufactured only after explicit digital approval of the online soft copy preview by the client. Once an order is approved and sent to pro-lab photographic printing and hand-binding, design revisions cannot be recalled.
+        </p>
+<h3>Quality Guarantee <span class="amp">&amp;</span> Replacement</h3>
+<p>
+          Ultraa Albums guarantees 100% archival craftsmanship. In the rare event of a manufacturing defect or transit damage, notification must be submitted within 7 days of delivery with photographic evidence, and our studio will replace the damaged product promptly.
+        </p>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t2" id="pg-thank-you"><div class="wrap prose">
+<section>
+<div>
+<div>
+
+<span class="kick">Inquiry Confirmed</span>
+<h1>Thank You!</h1>
+<p>
+          Your inquiry has been received by Ultraa Albums. Our founder Rajiv and our senior design team will review your requirements and reach out within 24 hours.
+        </p>
+<div>
+<a class="btn p" href="#home">Return to Homepage</a>
+<a class="btn s" href="#products">Explore Album Formats</a>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t3" id="pg-wedding-photo-albums"><div class="wrap prose">
+<section>
+<div>
+<div>
+<span class="kick">Heirloom Memories</span>
+<h1>Wedding Photo Albums Crafted for Life</h1>
+<p>
+          The team at Ultraa Albums knows how important and valuable a wedding ceremony is in anyone’s life. Even in the digital world, nothing equals the physical feeling of turning page by page in a handcrafted heirloom album.
+        </p>
+</div>
+<div class="g">
+<div>
+<h2>Your Treasure Trove of Memories</h2>
+<p>
+            Whether it was a grand Indian wedding ceremony or an intimate destination vows exchange, the laughter, tears, food, music, and priceless emotions deserve to be safely bound.
+          </p>
+<p>
+            Our wedding albums feature Silver Halide photographic prints mounted on thick archival board that never curls, fades, or yellows. We give you options for genuine leather covers, diamond acrylic glass covers, or natural woven linen with personalized gold foil lettering.
+          </p>
+<div>
+<a class="btn p" href="#flush-mount-album">View Flush Mount Spreads</a>
+<a class="btn s" href="#album-designs">Explore Design Themes</a>
+</div>
+</div>
+<div>
+<img alt="Wedding ceremony spread" data-i="wedding_d1"/>
+<img alt="Wedding portrait spread" data-i="wedding_e1"/>
+<img alt="Wedding reception spread" data-i="wedding_f1"/>
+<img alt="Wedding rituals spread" data-i="wedding_u18"/>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<main class="page t2" id="pg-contact"><div class="wrap prose"><span class="kick">Get in touch</span><h1>Contact Ultraa Albums Studio</h1><p>Have an inquiry regarding custom albums, photo editing or album designing? Reach out to our team in Mumbai. We look forward to hearing from you.</p>
+<div class="g cx"><div class="c"><h3>Visit our studio</h3><p>Shree Krishna Ind. Estate, Near Toll Naka, 211, Western Express Hwy, Dahisar East, Mumbai 400068, INDIA</p></div><div class="c"><h3>Call our team</h3><p><a href="tel:+919322254315">+91-93222 54315</a><br><a href="tel:+919320054315">+91-93200 54315</a><br>Mon – Sat, 9:30 AM – 7:30 PM IST</p></div><div class="c"><h3>Email</h3><p><a href="mailto:ultraaalbums@gmail.com">ultraaalbums@gmail.com</a><br><a href="mailto:ultraadesignes@gmail.com">ultraadesignes@gmail.com</a></p></div></div>
+<form id="fm" class="ff" novalidate><input class="fi" name="name" placeholder="Full name *"><input class="fi" name="phone" placeholder="Phone / WhatsApp *"><input class="fi" name="email" placeholder="Email address *"><select class="fi" name="prod"><option>Flush Mount Album</option><option>Layflat Album</option><option>Luxury Albums</option><option>Photo Book</option><option>Box and Bags</option><option>Slip in Albums</option><option>Album Designing</option><option>Image Editing</option><option>Wedding Photography</option></select><textarea class="fi" name="msg" rows="4" placeholder="Message / requirements"></textarea><button class="btn p" type="submit">Send message</button></form><div id="ok" class="c" style="display:none"><h3>Message ready</h3><p>Your email app has opened with your inquiry. We reply within 24 hours.</p></div></div></main>
+<footer><div class="wrap fg"><div><img src="assets/images/logo.png" alt="Ultraa Albums" style="height:64px;margin-bottom:.8rem"><p>Photo album manufacturer and album designer in Mumbai.</p></div><div><h4>Products</h4><a href="#flush-mount-album">Flush Mount Album</a><a href="#layflat">Layflat</a><a href="#photo-book">Photo Book</a><a href="#luxury-albums">Luxury Albums</a><a href="#box-and-bags">Box and Bags</a><a href="#slip-in-albums">Slip in Albums</a></div><div><h4>Services</h4><a href="#image-editing">Image Editing</a><a href="#photography">Wedding Photography</a><a href="#album-designing">Album Designing</a><a href="#album-designs">Album Designs</a><a href="#wedding-photo-albums">Wedding Photo Albums</a></div><div><h4>UK</h4><a href="#flush-mount-album-for-uk">Flush Mount Album</a><a href="#luxury-albums-for-uk">Luxury Albums</a><a href="#box-and-bags-for-uk">Box and Bags</a><a href="#slip-in-albums-for-uk">Slip in Albums</a><a href="#image-editing-for-uk">Image Editing</a><a href="#photo-book-for-uk">Photo Book</a><a href="#photography-for-uk">Photography</a></div><div><h4>Company</h4><a href="#about">About Us</a><a href="#blogs">Blogs</a><a href="#faq">FAQ</a><a href="#privacy-policy">Privacy Policy</a><a href="#terms-and-condition">Terms & Conditions</a><a href="#contact">Contact Us</a></div><div><h4>Studio</h4><p>Shree Krishna Ind. Estate, 211, Western Express Hwy, Dahisar East, Mumbai 400068</p><p><a href="tel:+919322254315">+91-93222 54315</a><br><a href="mailto:ultraaalbums@gmail.com">ultraaalbums@gmail.com</a></p></div></div><div class="wrap" style="margin-top:2rem;font-size:.8rem">© 2026 Ultraa Album. All rights reserved.</div></footer><div id="lb"><img alt=""></div><script>
+const IMG={"album_sizes": "assets/images/album_sizes.jpg", "box_bag_1": "assets/images/box_bag_1.jpg", "editing_after": "assets/images/editing_after.jpg", "editing_before": "assets/images/editing_before.jpg", "flush_mount_1": "assets/images/flush_mount_1.jpg", "flush_mount_2": "assets/images/flush_mount_2.jpg", "hero_cover": "assets/images/hero_cover.jpg", "layflat_1": "assets/images/layflat_1.jpg", "luxury_casket": "assets/images/luxury_casket.jpg", "photobook_1": "assets/images/photobook_1.jpg", "slip_in_1": "assets/images/slip_in_1.jpg", "team_bhairavi": "assets/images/team_bhairavi.jpg", "team_mayank": "assets/images/team_mayank.jpg", "team_rajiv": "assets/images/team_rajiv.jpg", "wedding_d1": "assets/images/wedding_d1.jpg", "wedding_e1": "assets/images/wedding_e1.jpg", "wedding_f1": "assets/images/wedding_f1.jpg", "wedding_u18": "assets/images/wedding_u18.jpg"};
+
+/* User-supplied album photography */
+IMG.flush_mount_1='assets/images/user_flush_mount_1.jpg';
+IMG.layflat_1='assets/images/user_layflat_1.jpg';
+IMG.luxury_casket='assets/images/user_luxury_casket.jpg';
+IMG.slip_in_1='assets/images/slip_in_user.jpg';IMG.photobook_1='assets/images/photobook_user.jpg';IMG.box_bag_1='assets/images/box_bag_user.jpg';IMG.svc_photo='assets/images/svc_photo.jpg';IMG.svc_edit='assets/images/svc_edit.jpg';IMG.editing_before='assets/images/edit_before.jpg';IMG.editing_after='assets/images/edit_after.jpg';IMG.cov='assets/images/cover_family.jpg';IMG.baby_user='assets/images/baby_user.jpg';IMG.g_pano='assets/images/g_pano.jpg';IMG.g_spreads='assets/images/g_spreads.jpg';IMG.g_dance='assets/images/g_dance.jpg';IMG.g_wedding='assets/images/photo_wedding.png';IMG.g_family='assets/images/photo_family.jpg';IMG.g_travel='assets/images/photo_travel.png';IMG.g_ganesh='assets/images/photo_ganesh.png';IMG.g_botanical='assets/images/photo_botanical.png';
+
+
+document.querySelectorAll('[data-i]').forEach(e=>e.src=IMG[e.dataset.i]);
+IMG.s1='assets/images/spread_1.jpg';IMG.s2='assets/images/spread_2.jpg';IMG.s3='assets/images/spread_3.jpg';
+const UQ=(i,w)=>'https://images.unsplash.com/photo-'+i+'?auto=format&fit=crop&q=85&w='+w,W1='1583939003579-730e3918a45a',W2='1595407753234-0882f1e77954',B1='1564172420073-e553c280b6f7',
+RM={},RI={};
+const $=s=>document.querySelector(s),u=n=>(RM[n]?'url('+RM[n]+'),':'')+'url('+new URL(IMG[n],document.baseURI).href+')';
+/* cards */
+const PM={'Flush Mount Album':'flush','Layflat Album':'lay','Luxury Albums':'casket','Photo Book':'photo'};
+const C=[['flush_mount_1','Signature heirloom','Flush Mount Album','Heavyweight 0.5–1.0 mm rigid core with seamless panoramic spreads on Fuji Crystal Archive paper.',5400],['layflat_1','Zero gutter','Layflat Album','Thinner, lighter substrate — more pages, full 2-page panoramic spreads.',3800],['luxury_casket','Crystal glass','Luxury Albums','Acrylic crystal, leather or velvet covers with a monogrammed wooden casket.',7800],['photobook_1','Coffee table','Photo Book','Non-tearable paper in glossy, matte or feather-touch finish. Full flat binding.',1850],['box_bag_1','Heirloom packaging','Boxes & Bags','Wooden frame in leatherette with cameo or acrylic window and carry handles.',2200],['slip_in_1','300 capacity','Slip-in Albums','Moisture-proof polypropylene pockets, ultrasonic sealed. Perfect studio gifting.',1200]];
+$('#cards').innerHTML=C.map(c=>`<article class="card rv" ${PM[c[2]]?`data-p="${PM[c[2]]}"`:''}><div class="im"><img src="${IMG[c[0]]}" alt="${c[2]}" loading="lazy"></div><div class="tx"><small>${c[1]}</small><h3>${c[2]}</h3><p>${c[3]}</p><p class="from">From <b class="pr" data-inr="${c[4]}"></b></p>${PM[c[2]]?'<small style="display:block;margin-top:.8rem">View in 3D ↑</small>':''}</div></article>`).join('');
+/* 3D studio — 4 products */
+const SZ={'12×12″':[12,12],'12×18″':[9,12],'10×10″':[10,10],'9×12″':[6,9],'6×8″':[4,6]};
+const CL={'Blush':['#F2D8D2','#965B50'],'Lavender':['#DFD7F2','#66528A'],'Sage':['#D3E8D8','#457859'],'Butter':['#F7E7BE','#8E6D24'],'Rose':['#D6006F','#FFE3F0']};
+const PR={flush:{n:'Flush Mount',e:3.4,sp:['s1','s2','s1'],sz:'12×12″',cls:'',spec:'1.0 mm rigid archival board · panoramic spreads · up to 30 spreads'},
+lay:{n:'Layflat',e:1.1,sp:['s2','s1','s2'],sz:'12×18″',cls:'lf',spec:'0.5 mm slim core · opens 180° dead-flat · up to 50 spreads'},
+casket:{n:'Luxury Wooden Casket',sz:'12×12″',spec:'Hand-finished wooden casket · monogram plate · velvet lining · album inside'},
+photo:{n:'Modern Photo Book',e:.8,sp:['s3','s1','s2'],sz:'9×12″',cls:'lf',spec:'Non-tearable paper · feather-touch finish · fully flat binding'}};
+const st={f:'flush',s:'12×12″',c:'Blush',p:0,ry:-16,rx:-9,tr:-9,drag:false};
+const book=$('#book'),cas=$('#cas'),rig=$('#rig'),stage=$('#stage'),floor=$('#floor'),sz=$('#sizes'),cl=$('#cols');
+const mk=(c,i)=>`<div class="fc ${c}"><i style="--im:${u(i)}"></i></div>`;
+let leaves=[],edge,spine;
+const gs=document.createElement('div');gs.className='gs';stage.append(gs);
+function gsh(){const cs=st.f==='casket',g=(e,v)=>parseFloat(e.style.getPropertyValue(v))||0;let y,w;
+ if(cs){const H=g(cas,'--H'),W=g(cas,'--W');y=(parseFloat(cas.style.transform.replace(/[^\d.\-]/g,''))||0)+H/2+8;w=W*1.7}
+ else{const h=g(book,'--h'),ww=g(book,'--w');y=h/2+6;w=st.p?ww*2.25:ww*1.35}
+ gs.style.width=w+'px';gs.style.transform='translate(-50%,'+y+'px)'}
+function build(){const P=PR[st.f];
+ if(st.f==='casket'){book.style.display='none';cas.style.display='block';
+  cas.innerHTML=['f','b','l','r','d'].map(c=>`<div class="cw ${c}"></div>`).join('')+'<div class="cw fl"></div><div class="alb"><div class="at fc cov"><span class="cr">UA</span><span class="nm nmo"></span><small>Heirloom · 2026</small></div></div><div class="lidh"><div class="lid"><div class="fc wd"><div class="pl"><span class="nmo"></span></div></div><div class="fc sat"></div><div class="lip cw"></div></div></div>';return}
+ cas.style.display='none';book.style.display='block';book.className='book '+P.cls;const S=P.sp;
+ const c=st.f==='photo'?`<div class="fc cov pcv" style="--im:${u('cov')}"><span class="nm nmo"></span></div>`:'<div class="fc cov"><span class="cr">UA</span><span class="nm nmo"></span><small>Heirloom · 2026</small></div>';
+ book.innerHTML=`<div class="spine"></div><div class="edge"></div><div class="leaf">${c}${mk('bk l',S[0])}</div><div class="leaf">${mk('r',S[0])}${mk('bk l',S[1])}</div><div class="leaf">${mk('r',S[1])}${mk('bk l',S[2])}</div><div class="leaf">${mk('r',S[2])}<div class="fc bk lea"></div></div>`;
+ leaves=[...book.querySelectorAll('.leaf')];edge=book.querySelector('.edge');spine=book.querySelector('.spine')}
+function layout(){const P=PR[st.f],cs=st.f==='casket',n=cs?3:4,[a,b]=SZ[st.s],k=st.f==='casket'?Math.min(stage.clientWidth*.62/18,stage.clientHeight*.72/12)*.78:Math.min(stage.clientWidth*.98/(2*a),stage.clientHeight*.9/b),w=a*k,h=b*k,v=`--cv:${CL[st.c][0]};--fg:${CL[st.c][1]};--k:${k*.8}px;`;let fw,fy;
+ if(cs){const W=w*1.12,D=h*1.12,H=h*.3+12,o=st.p===2;
+  cas.style.cssText=`display:block;transform:translateY(${k*3.2}px);--W:${W}px;--D:${D}px;--H:${H}px;${v}--la:${st.p>0?105:0}deg;--ay:${o?-(D*.43)-H*.5:H/2-16}px;--az:${o?D*.2:0}px;--aa:${o?-84:0}deg`;fw=W*1.5;fy=H/2+6;
+  $('#nx').textContent=['Open casket →','Lift out album →','Close casket ↺'][st.p]}
+ else{const e=P.e*Math.max(k/9,.6),D=e*4;book.style.cssText+=`;--w:${w}px;--h:${h}px;${v}`;
+  leaves.forEach((l,i)=>{const f=i<st.p;l.style.transform=`translateZ(${f?i*e:(4-i)*e}px) rotateY(${f?-180:0}deg)`});
+  edge.style.width=D+'px';edge.style.setProperty('--g',e+'px');spine.style.width=D+'px';
+  book.style.transform=`translateX(${st.p===0?-w/2:0}px)`;fw=st.p?w*2.1:w*1.2;fy=h/2+6;
+  $('#nx').textContent=st.p===3?'Close album ↺':'Turn page →'}
+ floor.style.width=fw+'px';gsh();floor.style.transform=`translate(${cs||!st.p?-fw/2:-w*1.05}px,${fy}px)`;
+ document.querySelectorAll('.dots i').forEach((d,i)=>d.classList.toggle('on',i===st.p));
+ $('#spec').textContent=`${P.n} · ${st.s.replace('″','')}″ — ${P.spec}`;$('#lf').textContent=P.n;$('#ls').textContent=st.s;$('#lc').textContent=st.c;
+ document.querySelectorAll('.nmo').forEach(x=>x.textContent=$('#nm').value||'Your Names')}
+Object.keys(SZ).forEach(s=>sz.insertAdjacentHTML('beforeend',`<button class="chip${s===st.s?' on':''}" data-s="${s}">${s}</button>`));
+Object.entries(CL).forEach(([n,x])=>cl.insertAdjacentHTML('beforeend',`<button class="sw${n===st.c?' on':''}" data-c="${n}" style="background:${x[0]}" aria-label="${n}"></button>`));
+function setP(f){st.f=f;st.s=PR[f].sz;st.p=0;st.tr=f==='casket'?-24:-9;
+ $('#seg').querySelectorAll('button').forEach((x,i)=>{x.classList.toggle('on',x.dataset.f===f);if(x.dataset.f===f)$('#pill').style.transform=`translateX(${i*100}%)`});
+ sz.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x.dataset.s===st.s));
+ $('#dots').innerHTML='<i></i>'.repeat(f==='casket'?3:4);build();layout();
+ clearTimeout(st.t1);clearTimeout(st.t2);st.t1=setTimeout(()=>{st.p=1;layout()},800);if(f==='casket')st.t2=setTimeout(()=>{st.p=2;layout()},2700)}
+sz.onclick=e=>{const b=e.target.closest('[data-s]');if(!b)return;st.s=b.dataset.s;sz.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===b));if(!st.p&&st.f!=='casket')st.p=1;layout()};
+cl.onclick=e=>{const b=e.target.closest('[data-c]');if(!b)return;st.c=b.dataset.c;cl.querySelectorAll('.sw').forEach(x=>x.classList.toggle('on',x===b));layout()};
+$('#seg').onclick=e=>{const b=e.target.closest('[data-f]');if(b)setP(b.dataset.f)};
+const NP=()=>st.f==='casket'?3:4;
+$('#nx').onclick=()=>{st.p=(st.p+1)%NP();layout()};$('#pv').onclick=()=>{st.p=(st.p+NP()-1)%NP();layout()};$('#nm').oninput=layout;
+document.querySelectorAll('.card[data-p]').forEach(c=>c.onclick=()=>{setP(c.dataset.p);$('.studio').scrollIntoView({behavior:'smooth',block:'center'})});
+let sx=0,sy=0;
+stage.addEventListener('pointerdown',e=>{st.drag=true;sx=e.clientX;sy=e.clientY;stage.setPointerCapture(e.pointerId)});
+stage.addEventListener('pointermove',e=>{if(!st.drag)return;st.ry+=(e.clientX-sx)*.45;st.rx=Math.max(-35,Math.min(50,st.rx-(e.clientY-sy)*.3));sx=e.clientX;sy=e.clientY});
+['pointerup','pointercancel'].forEach(t=>stage.addEventListener(t,()=>{st.drag=false;st.ry=((st.ry%360)+540)%360-180}));
+(function loop(t){if(st.off){requestAnimationFrame(loop);return}const sw=st.drag?0:Math.sin(t/1250)*4,so=Math.min(scrollY,900)*.05;if(!st.drag){st.ry+=(-16+(st.hx||0)*22-st.ry)*.07;st.rx+=(st.tr-(st.hy||0)*14-st.rx)*.07}
+ rig.style.transform=`rotateX(${st.rx+so*.4}deg) rotateY(${st.ry+sw+so}deg)`;rig.style.setProperty('--gx',(50+(st.ry+sw+so)*1.4)+'%');requestAnimationFrame(loop)})(0);
+addEventListener('resize',layout);$('#dots').innerHTML='<i></i>'.repeat(4);build();layout();setTimeout(()=>{st.p=1;layout()},1300);
+/* reveal, nav, progress */
+const io=false?new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12}):null;
+
+addEventListener('scroll',()=>{const d=document.documentElement;$('#bar').style.width=(scrollY/(d.scrollHeight-innerHeight)*100)+'%';$('#nv').classList.toggle('stuck',scrollY>20)},{passive:true});
+/* card tilt */
+document.querySelectorAll('.card').forEach(c=>{c.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-4px)`});c.addEventListener('pointerleave',()=>c.style.transform='')});
+
+/* currency, menu, extras */
+const RT={INR:1,GBP:.0092,USD:.0115};
+
+const mn=$('#menu'),cm=()=>{mn.classList.remove('o');document.querySelectorAll('.dd').forEach(d=>d.classList.remove('o'))};
+$('#bg').onclick=()=>mn.classList.toggle('o');
+document.querySelectorAll('.dd>button').forEach(b=>b.onclick=()=>{const d=b.parentNode,o=d.classList.contains('o');document.querySelectorAll('.dd').forEach(x=>x.classList.remove('o'));if(!o)d.classList.add('o')});
+document.querySelectorAll('.dm [data-p]').forEach(a=>a.onclick=e=>{e.preventDefault();setP(a.dataset.p);cm();$('.studio').scrollIntoView({behavior:'smooth',block:'center'})});
+document.querySelectorAll('.menu a:not([data-p])').forEach(a=>a.addEventListener('click',cm));
+document.addEventListener('click',e=>{if(!e.target.closest('.dd'))document.querySelectorAll('.dd').forEach(x=>x.classList.remove('o'))});
+/* before/after */
+$('#ba input').oninput=e=>$('#ba').style.setProperty('--p',e.target.value+'%');
+/* form */
+$('#fm').onsubmit=e=>{e.preventDefault();const f=e.target;let bad=false;['name','phone','email'].forEach(n=>{const i=f[n],v=i.value.trim(),ko=!v||(n==='email'&&!/^\S+@\S+\.\S+$/.test(v));i.classList.toggle('err',ko);bad=bad||ko});if(bad)return;
+ const b=`Name: ${f.name.value}\nPhone: ${f.phone.value}\nEmail: ${f.email.value}\nInterested in: ${f.prod.value}\n\n${f.msg.value}`;
+ location.href='mailto:ultraaalbums@gmail.com?subject='+encodeURIComponent('Inquiry: '+f.prod.value)+'&body='+encodeURIComponent(b);f.style.display='none';$('#ok').style.display='block'};
+
+/* ===== router, gallery, cards ===== */
+const PGS=["about", "album-designing", "album-designs", "blogs", "box-and-bags-for-uk", "box-and-bags", "faq", "flush-mount-album-for-uk", "flush-mount-album", "image-editing-for-uk", "image-editing", "landing-2023", "layflat", "luxury-albums-for-uk", "luxury-albums", "photo-book-for-uk", "photo-book", "photo-editing-and-album-design", "photography-for-uk", "photography", "privacy-policy", "products", "slip-in-albums-for-uk", "slip-in-albums", "terms-and-condition", "thank-you", "wedding-photo-albums", "contact"],SL=["flush-mount-album", "layflat", "luxury-albums", "photo-book", "box-and-bags", "slip-in-albums"];
+document.querySelectorAll('#cards .card').forEach((c,i)=>{const s=SL[i]||'products';c.onclick=()=>location.hash=s});
+document.querySelectorAll('[data-go]').forEach(c=>c.onclick=()=>location.hash=c.dataset.go);
+document.querySelectorAll('[data-i]').forEach(e=>{if(!e.src)e.src=IMG[e.dataset.i]});
+document.querySelectorAll('[data-lb]').forEach(f=>f.onclick=()=>{$('#lb img').src=IMG[f.dataset.lb];$('#lb').classList.add('on')});
+$('#lb').onclick=()=>$('#lb').classList.remove('on');
+function route(){const h=location.hash.slice(1),isP=PGS.includes(h);
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',isP&&p.id==='pg-'+h));
+ $('#home').style.display=isP?'none':'';cm();
+ if(isP){const t=document.querySelector('#pg-'+h+' h1');document.title=(t?t.textContent+' — ':'')+'Ultraa Albums';scrollTo(0,0)}
+ else{document.title='Ultraa Albums — Photo Album Manufacturer & Album Designer in Mumbai';const el=h&&h!=='home'&&document.getElementById(h);el?el.scrollIntoView():scrollTo(0,0)}}
+addEventListener('hashchange',route);route();
+</script><script id="x-up">
+(()=>{const R=matchMedia('(prefers-reduced-motion:reduce)').matches,fine=matchMedia('(pointer:fine)').matches,qa=x=>[...document.querySelectorAll(x)];
+function split(el){if(!el)return;let i=0;(function w(n){[...n.childNodes].forEach(c=>{if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(t=>{if(!t.trim()){if(t)f.append(t);return}const o=document.createElement('span');o.className='w';o.innerHTML='<span style="--i:'+(i++)+'">'+t+'</span>';f.append(o)});c.replaceWith(f)}else w(c)})})(el)}
+split($('.hero h1'));qa('.head h2,.cta2 h2').forEach(split);
+qa('img').forEach(i=>i.decoding='async');
+const T='.card,.sy,.gt,.st,.c,.ba,.head,.cta2,.two>*,.fq details,.prose h1,.prose h2,.prose .g>*,.prose blockquote,.prose img,.prose .cta,.ff,footer .fg>*';
+qa(T).forEach(e=>{e.classList.add('rv');e.style.setProperty('--dl',([...e.parentElement.children].indexOf(e)%4)*.09+'s')});
+const io=new IntersectionObserver(es=>es.forEach(x=>{const e=x.target;
+ if(x.isIntersecting){e.classList.add('in');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.add('done'),1500)}
+ else{const up=x.boundingClientRect.top<0;e.style.setProperty('--ty',(up?-56:56)+'px');e.style.setProperty('--cp',up?'0 0 100% 0':'100% 0 0 0');e.classList.remove('in','done');clearTimeout(e._t)}}),{threshold:0,rootMargin:'0px 0px -8% 0px'});
+setInterval(()=>qa('.rv:not(.in)').forEach(e=>{const r=e.getBoundingClientRect();if(r.width&&r.top<innerHeight*.92&&r.bottom>0)e.classList.add('in')}),900);
+qa('.rv').forEach(e=>io.observe(e));
+/* scroll direction: nav, marquee, parallax */
+let ly=scrollY,dir=1,vel=0,tk=false;const mq=qa('.mq div,.ann div').flatMap(e=>e.getAnimations()),par=qa('.card .im img,.sy img,.gt img,.ph img'),nv=$('#nv'),mn=$('#menu');
+const rate=()=>mq.forEach(a=>a.playbackRate=dir*(1+vel*.12));
+function onS(){const y=scrollY,d=y-ly;if(Math.abs(d)>2)dir=d>0?1:-1;vel+=(Math.min(Math.abs(d),60)-vel)*.25;ly=y;
+ nv.classList.toggle('hide',dir>0&&y>260&&!mn.classList.contains('o'));rate();
+ if(!R)par.forEach(i=>{const r=i.parentElement.getBoundingClientRect();if(r.bottom<-120||r.top>innerHeight+120)return;i.style.setProperty('--py',((r.top+r.height/2-innerHeight/2)*-.05).toFixed(1)+'px')});tk=false}
+addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(onS)}},{passive:true});
+setInterval(()=>{if(vel>.05){vel*=.88;rate()}},70);
+/* 3D studio: hover parallax, pause offscreen, idle autoplay */
+stage.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;const r=stage.getBoundingClientRect();st.hx=(e.clientX-r.left)/r.width-.5;st.hy=(e.clientY-r.top)/r.height-.5});
+stage.addEventListener('pointerleave',()=>{st.hx=st.hy=0});
+new IntersectionObserver(([x])=>{st.off=!x.isIntersecting}).observe(stage);
+let idle=0;['pointerdown','click','input','keydown'].forEach(t=>$('.studio').addEventListener(t,()=>idle=Date.now()));
+setInterval(()=>{if(R||st.off||st.drag||Date.now()-idle<6000)return;st.p=(st.p+1)%NP();layout()},3400);
+/* magnetic buttons, lightbox esc */
+if(fine&&!R)qa('.btn').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.translate=(e.clientX-r.left-r.width/2)*.22+'px '+(e.clientY-r.top-r.height/2)*.3+'px'});b.addEventListener('pointerleave',()=>b.style.translate='')});
+addEventListener('keydown',e=>{if(e.key==='Escape')$('#lb').classList.remove('on')});
+})();
+</script><script id="x-up2">
+(()=>{const qa=x=>[...document.querySelectorAll(x)];
+addEventListener('error',e=>{const t=e.target;if(t&&t.tagName==='IMG'&&t.dataset.fb){const f=t.dataset.fb;delete t.dataset.fb;t.src=f}},true);
+qa('img[data-i]').forEach(e=>{const r=RI[e.dataset.i];if(r){e.dataset.fb=e.src;e.src=r}});
+qa('[data-lb]').forEach(f=>f.addEventListener('click',()=>{const r=RI[f.dataset.lb];if(r)$('#lb img').src=r}));
+const b=$('#band');if(b){b.dataset.fb=IMG.editing_after;b.src=UQ(W1,2400)}
+})();
+</script><script>(()=>{const q=x=>[...document.querySelectorAll(x)],lb=document.getElementById('lb'),mas=document.getElementById('mas');
+function fit(){if(!mas)return;const t=[...mas.children];t.forEach(x=>x.classList.remove('off'));const c=getComputedStyle(mas).gridTemplateColumns.split(' ').length||4,k=t.length-t.length%c;t.forEach((x,n)=>{if(n>=k)x.classList.add('off')})}
+q('.hx img,.gx img').forEach(i=>{const k=i.dataset.k,u=i.dataset.u,loc=()=>{if(IMG[k])i.src=IMG[k]};
+i.addEventListener('error',()=>{const f=i.closest('.gx');if(u&&i.src.indexOf('unsplash')>-1){if(f){f.remove();fit()}else loc()}});
+if(u)i.src=u;else loc()});
+q('.gx').forEach(f=>f.addEventListener('click',()=>{const im=f.querySelector('img');if(lb&&im){lb.querySelector('img').src=im.src;lb.classList.add('on')}}));
+const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'}):null;
+if(mas&&io){mas.classList.add('gxr');const c=()=>getComputedStyle(mas).gridTemplateColumns.split(' ').length||4;[...mas.children].forEach((f,n)=>{f.style.setProperty('--d',(n%c()*.09)+'s');io.observe(f)})}
+fit();addEventListener('resize',fit);addEventListener('load',fit);})();</script>
+<script id="user-photo-updates">
+(()=> {
+ const photos = {"wedding":"assets/images/photo_wedding.png","family":"assets/images/photo_family.jpg","travel":"assets/images/photo_travel.png","ganesh":"assets/images/photo_ganesh.png","botanical":"assets/images/photo_botanical.png"};
+ const set = (el, src) => { if(el){el.src=src;el.removeAttribute('data-u');} };
+ // Category cards: preserve the existing baby album image.
+ document.querySelectorAll('[data-slot="wedding"]').forEach(el=>set(el,photos.wedding));
+ document.querySelectorAll('[data-slot="family"]').forEach(el=>set(el,photos.family));
+ document.querySelectorAll('[data-slot="travel"]').forEach(el=>set(el,photos.travel));
+ document.querySelectorAll('[data-slot="wall-art"]').forEach(el=>set(el,photos.ganesh));
+ // Keep the supplied botanical print alongside the Ganesh artwork in the gallery.
+ const gallery=document.querySelector('#mas');
+ if(gallery){
+   const items=[
+    ['Wedding couple',photos.wedding],
+    ['Together',photos.family],
+    ['Photo book',photos.travel],
+    ['Reception',photos.wedding]
+   ];
+   items.forEach(([caption,src])=>{
+     const fig=[...gallery.querySelectorAll('figure')].find(f=>f.querySelector('figcaption')?.textContent.trim()===caption);
+     set(fig?.querySelector('img'),src);
+   });
+   [].forEach(([caption,src])=>{
+     const fig=document.createElement('figure');fig.className='gx';
+     const img=document.createElement('img');img.alt=caption;img.src=src;
+     const cap=document.createElement('figcaption');cap.textContent=caption;
+     fig.append(img,cap);gallery.append(fig);
+   });
+ }
+ // Reuse supplied travel and family imagery in related portfolio/feature visuals.
+ document.querySelectorAll('img[alt*="Family" i], img[alt*="Together" i]').forEach(el=>set(el,photos.family));
+ document.querySelectorAll('img[alt*="Travel" i], img[alt*="Destination" i]').forEach(el=>set(el,photos.travel));
+})();
+</script>
+</body></html>
